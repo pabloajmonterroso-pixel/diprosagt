@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Diprosa GT – Celulares Desbloqueados Guatemala</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('h4u3JK2qR9Xb6iHj2');</script>
+<style>
+:root {
+  --bg:       #F7F6F3;
+  --white:    #FFFFFF;
+  --dark:     #111110;
+  --dark2:    #1E1E1C;
+  --text:     #1A1A18;
+  --text2:    #6B6B63;
+  --sep:      #E4E3DE;
+  --accent:   #E84520;
+  --accent-h: #CC3A18;
+  --green:    #22C55E;
+  --red:      #EF4444;
+  --amber:    #F59E0B;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{background:var(--dark);padding:0 5%;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:900;}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:3px;}
+.nav-logo .dot{color:var(--accent);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:#fff;}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-icon-btn{background:rgba(255,255,255,0.08);border:none;border-radius:8px;width:38px;height:38px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all 0.2s;position:relative;}
+.nav-icon-btn:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;border-radius:50%;width:17px;height:17px;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid var(--dark);}
+
+/* ── HERO ── */
+.hero{background:var(--dark);padding:72px 5% 0;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;min-height:520px;overflow:hidden;position:relative;}
+.hero-text{flex:0 0 auto;max-width:520px;padding-bottom:72px;position:relative;z-index:2;}
+.hero-tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:4px;margin-bottom:22px;}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(48px,6vw,76px);font-weight:700;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:18px;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:380px;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-accent{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:13px 26px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.2s,transform 0.15s;}
+.btn-accent:hover{background:var(--accent-h);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:rgba(255,255,255,0.7);border:1.5px solid rgba(255,255,255,0.2);border-radius:6px;padding:12px 26px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s;}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);color:#fff;}
+.hero-phones{flex:1;display:flex;align-items:flex-end;justify-content:flex-end;position:relative;min-height:440px;}
+.hero-phone-main{height:420px;object-fit:contain;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.6));position:relative;z-index:2;margin-right:5%;}
+.hero-phone-back{height:360px;object-fit:contain;filter:drop-shadow(0 30px 40px rgba(0,0,0,0.5));position:absolute;right:30%;bottom:0;z-index:1;transform:rotate(-7deg);opacity:0.85;}
+
+/* ── HERO SLIDESHOW ── */
+.hero-slideshow{position:relative;overflow:hidden;min-height:440px;}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;opacity:0;transition:opacity 0.7s ease-in-out;pointer-events:none;z-index:1;}
+.hero-slide.active{opacity:1;pointer-events:auto;z-index:2;}
+.hero-slide img{max-height:430px;max-width:100%;object-fit:contain;filter:drop-shadow(0 36px 56px rgba(0,0,0,0.65));padding-bottom:0px;will-change:opacity;}
+.slide-brand-pill{position:absolute;top:18px;right:18px;background:rgba(255,255,255,0.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:700;color:#fff;letter-spacing:0.5px;text-transform:uppercase;}
+.slide-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10;}
+.slide-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.25);border:none;cursor:pointer;padding:0;transition:all 0.3s;}
+.slide-dot.active{width:22px;border-radius:4px;background:var(--accent);}
+@keyframes slideIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.hero-accent-bar{position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--accent);}
+
+/* ── STATS STRIP ── */
+.stats-strip{background:var(--white);border-bottom:1px solid var(--sep);padding:24px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--text);letter-spacing:-0.5px;}
+.stat-label{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.stat-sep{width:1px;background:var(--sep);}
+
+/* ── SECTION ── */
+.section{padding:64px 5%;}
+.section-head{margin-bottom:36px;}
+.section-tag{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-0.5px;color:var(--text);}
+.section-head p{font-size:14px;color:var(--text2);margin-top:8px;line-height:1.6;max-width:480px;}
+
+/* ── FILTER PILLS ── */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;align-items:center;}
+.filter-pill{background:var(--white);border:1.5px solid var(--sep);border-radius:6px;padding:7px 18px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;font-family:inherit;transition:all 0.18s;}
+.filter-pill:hover,.filter-pill.active{background:var(--text);color:#fff;border-color:var(--text);}
+.filter-sep{font-size:12px;color:var(--sep);margin:0 4px;}
+.sort-label{font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-left:12px;}
+.sort-pill{background:var(--white);border:1.5px solid var(--sep);border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;font-family:inherit;transition:all 0.18s;}
+.sort-pill.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.sort-pill:hover:not(.active){border-color:var(--accent);color:var(--accent);}
+
+/* ── PRODUCT GRID ── */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.product-card{background:var(--white);border:1.5px solid var(--sep);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;cursor:pointer;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;position:relative;}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.09);border-color:var(--accent);}
+.product-badge{position:absolute;top:10px;left:10px;z-index:3;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;padding:3px 8px;border-radius:4px;}
+.product-badge.new{background:var(--green);color:#fff;}
+.product-badge.sale{background:var(--accent);color:#fff;}
+.product-badge.wholesale{background:#0c8550;color:#fff;}
+body.mayorista-mode nav{background:#064e3b;}
+body.mayorista-mode .nav-logo .dot{color:#22c55e;}
+#mayoristaBanner{display:none;}
+body.mayorista-mode #mayoristaBanner{display:flex !important;}
+.product-img-wrap{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:12px;background:#F5F4F0;position:relative;overflow:hidden;}
+.product-img-wrap img{width:100%;height:100%;object-fit:contain;transition:transform 0.35s,filter 0.35s;flex-shrink:0;filter:drop-shadow(0 8px 18px rgba(0,0,0,0.13));}
+.product-card:hover .product-img-wrap img{transform:scale(1.05);filter:drop-shadow(0 14px 28px rgba(0,0,0,0.2));}
+.product-info{padding:16px;}
+.product-brand{font-size:10px;font-weight:700;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;}
+.product-name{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px;}
+.color-mini-row{display:flex;gap:4px;align-items:center;margin-bottom:12px;}
+.color-mini-dot{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(0,0,0,0.1);flex-shrink:0;}
+.color-mini-more{font-size:10px;color:var(--text2);font-weight:600;}
+.product-footer{display:flex;align-items:center;justify-content:space-between;}
+.price-old{font-size:10px;color:var(--text2);text-decoration:line-through;}
+.price-main{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--text);letter-spacing:-0.3px;}
+.add-btn{background:var(--accent);color:#fff;border:none;border-radius:5px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background 0.2s;}
+.add-btn:hover{background:var(--accent-h);}
+.prod-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
+.prod-placeholder span{font-size:10px;font-weight:600;color:#aaa;text-align:center;line-height:1.3;max-width:110px;}
+
+/* ── PROMO BANNERS ── */
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.promo-card{background:var(--dark2);border-radius:10px;overflow:hidden;display:flex;align-items:center;min-height:240px;position:relative;}
+.promo-text{flex:1;padding:36px 32px;position:relative;z-index:2;}
+.promo-eyebrow{font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.promo-card h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.2vw,28px);font-weight:700;color:#fff;letter-spacing:-0.5px;line-height:1.15;margin-bottom:8px;}
+.promo-card p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:20px;max-width:200px;}
+.btn-accent-sm{background:var(--accent);color:#fff;border:none;border-radius:5px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.btn-accent-sm:hover{background:var(--accent-h);}
+.promo-img{width:42%;flex-shrink:0;display:flex;align-items:center;justify-content:flex-end;overflow:hidden;align-self:stretch;position:relative;z-index:1;}
+.promo-img img{height:110%;width:auto;object-fit:cover;opacity:0.5;mix-blend-mode:screen;}
+.promo-img svg{width:100%;height:auto;display:block;flex-shrink:0;}
+
+/* ── TESTIMONIALS ── */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+.test-card{background:var(--white);border:1.5px solid var(--sep);border-radius:10px;padding:24px;}
+.test-stars{color:var(--amber);font-size:13px;margin-bottom:12px;letter-spacing:1px;}
+.test-text{font-size:14px;line-height:1.7;color:var(--text2);margin-bottom:16px;font-style:italic;}
+.test-author{display:flex;align-items:center;gap:10px;}
+.test-avatar-init{width:38px;height:38px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sep);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--text2);flex-shrink:0;}
+.test-name{font-size:13px;font-weight:700;color:var(--text);}
+.test-loc{font-size:11px;color:var(--text2);}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:56px 5% 28px;}
+.footer-top{display:grid;grid-template-columns:1fr auto;gap:40px;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:36px;margin-bottom:28px;align-items:start;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:3px;}
+.footer-logo .dot{color:var(--accent);}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.7;max-width:260px;}
+.footer-contact{font-size:13px;color:rgba(255,255,255,0.45);margin-top:14px;display:flex;flex-direction:column;gap:6px;}
+.footer-contact a{color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;}
+.footer-contact a:hover{color:#fff;}
+.footer-links-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.3);margin-bottom:14px;}
+.footer-links-col a{display:block;font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:9px;transition:color 0.2s;}
+.footer-links-col a:hover{color:#fff;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.2);}
+.footer-socials{display:flex;gap:8px;}
+.social-btn{width:34px;height:34px;background:rgba(255,255,255,0.07);border-radius:6px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:14px;transition:background 0.2s;}
+.social-btn:hover{background:rgba(255,255,255,0.14);}
+
+/* ── CART SIDEBAR ── */
+.cart-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);z-index:2000;}
+.cart-overlay.open{display:block;}
+.cart-sidebar{position:fixed;top:0;right:-420px;width:400px;height:100vh;background:var(--white);z-index:2001;display:flex;flex-direction:column;transition:right 0.32s cubic-bezier(0.4,0,0.2,1);box-shadow:-4px 0 32px rgba(0,0,0,0.1);}
+.cart-sidebar.open{right:0;}
+.cart-header{padding:20px;border-bottom:1px solid var(--sep);display:flex;align-items:center;justify-content:space-between;}
+.cart-header h2{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--text);}
+.cart-close{background:var(--bg);border:none;border-radius:6px;width:30px;height:30px;font-size:14px;cursor:pointer;color:var(--text2);display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.cart-close:hover{background:var(--sep);}
+.cart-items{flex:1;overflow-y:auto;padding:14px 20px;}
+.cart-empty{text-align:center;padding:56px 20px;color:var(--text2);}
+.cart-empty .empty-icon{font-size:44px;margin-bottom:12px;display:block;}
+.cart-empty p{font-size:15px;font-weight:600;margin-bottom:4px;}
+.cart-empty small{font-size:13px;color:var(--text2);}
+.cart-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--sep);align-items:center;}
+.cart-item:last-child{border-bottom:none;}
+.cart-item-icon{width:52px;height:52px;background:var(--bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.cart-item-info{flex:1;}
+.cart-item-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.cart-item-price{font-size:12px;color:var(--text2);}
+.cart-item-qty{display:flex;align-items:center;gap:5px;}
+.qty-btn{background:var(--bg);border:none;border-radius:5px;width:26px;height:26px;font-size:14px;cursor:pointer;color:var(--text2);font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qty-num{font-size:13px;font-weight:700;width:20px;text-align:center;}
+.remove-btn{background:none;border:none;color:var(--sep);font-size:16px;cursor:pointer;transition:color 0.2s;}
+.remove-btn:hover{color:var(--red);}
+.cart-footer{padding:16px 20px 24px;border-top:1px solid var(--sep);}
+.cart-subtotal,.cart-total{display:flex;justify-content:space-between;margin-bottom:5px;}
+.cart-subtotal{font-size:13px;color:var(--text2);}
+.cart-total{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;color:var(--text);margin-bottom:16px;}
+.checkout-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:14px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.checkout-btn:hover{background:var(--accent-h);}
+.checkout-btn:disabled{opacity:0.4;cursor:not-allowed;}
+.cart-payment-note{text-align:center;font-size:11px;color:var(--text2);margin-top:10px;}
+
+/* ── CHECKOUT MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);z-index:3000;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--white);border-radius:14px;width:100%;max-width:500px;box-shadow:0 24px 72px rgba(0,0,0,0.22);overflow:hidden;animation:modalIn 0.26s cubic-bezier(0.4,0,0.2,1);}
+@keyframes modalIn{from{opacity:0;transform:scale(0.96) translateY(14px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.modal-header{background:var(--dark);padding:20px 22px;display:flex;align-items:flex-start;justify-content:space-between;}
+.modal-header h3{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:#fff;}
+.modal-header p{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px;}
+.modal-close{background:rgba(255,255,255,0.1);border:none;border-radius:6px;width:30px;height:30px;color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:12px;transition:background 0.2s;}
+.modal-close:hover{background:rgba(255,255,255,0.2);}
+.modal-steps{display:flex;padding:0 22px;border-bottom:1px solid var(--sep);}
+.modal-step{flex:1;text-align:center;padding:14px 0;font-size:12px;font-weight:600;color:var(--text2);border-bottom:2px solid transparent;transition:all 0.2s;}
+.modal-step.active{color:var(--accent);border-bottom-color:var(--accent);}
+.step-num{width:20px;height:20px;border-radius:50%;background:var(--bg);color:var(--text2);font-size:10px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-bottom:3px;}
+.modal-step.active .step-num{background:var(--accent);color:#fff;}
+.modal-body{padding:20px 22px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.form-group label{font-size:12px;font-weight:600;color:var(--text2);}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--sep);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border-color 0.2s,box-shadow 0.2s;background:var(--white);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,69,32,0.12);}
+.form-group input.error{border-color:var(--red);}
+.form-group textarea{resize:vertical;min-height:72px;font-size:13px;}
+.order-summary{background:var(--bg);border-radius:10px;padding:14px;margin-bottom:14px;}
+.order-summary-title{font-size:10px;font-weight:700;color:var(--text2);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:10px;}
+.order-item-row{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:5px;}
+.order-total-row{display:flex;justify-content:space-between;font-size:15px;font-weight:700;color:var(--text);border-top:1px solid var(--sep);padding-top:10px;margin-top:6px;}
+.pay-method-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.pay-method-btn{border:1.5px solid var(--sep);border-radius:8px;background:var(--white);padding:14px 10px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:var(--text);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;transition:all 0.18s;line-height:1.3;}
+.pay-method-btn .pm-icon{font-size:20px;}
+.pay-method-btn:hover{border-color:var(--accent);}
+.pay-method-btn.active{border-color:var(--accent);background:#FEF5F2;color:var(--accent);}
+.visa-cuotas-note{background:#FFF8E6;border:1.5px solid #F0C040;border-radius:8px;padding:10px 14px;font-size:12px;color:#7A5A00;margin-bottom:12px;}
+.cuotas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}
+.cuota-btn{border:1.5px solid var(--sep);border-radius:8px;background:var(--white);padding:12px 8px;cursor:pointer;font-family:inherit;text-align:center;transition:all 0.18s;}
+.cuota-btn .cuota-num{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--text);display:block;letter-spacing:-0.5px;}
+.cuota-btn .cuota-label{font-size:10px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;}
+.cuota-btn:hover{border-color:var(--accent);}
+.cuota-btn.active{border-color:var(--accent);background:#FEF5F2;}
+.cuota-btn.active .cuota-num{color:var(--accent);}
+.modal-footer{display:flex;justify-content:space-between;align-items:center;padding:14px 22px 20px;}
+.btn-back{background:none;border:none;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;font-family:inherit;padding:0;}
+.btn-next{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background 0.2s;}
+.btn-next:hover{background:var(--accent-h);}
+/* Confirm step */
+.confirm-icon{font-size:50px;text-align:center;margin:6px 0 14px;}
+.confirm-title{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--text);text-align:center;margin-bottom:6px;}
+.confirm-subtitle{font-size:14px;color:var(--text2);text-align:center;line-height:1.6;margin-bottom:20px;}
+.confirm-detail-box{background:var(--bg);border-radius:10px;padding:16px;margin-bottom:14px;}
+.confirm-detail-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--sep);}
+.confirm-detail-row:last-child{border-bottom:none;}
+.confirm-detail-row span:first-child{color:var(--text2);font-weight:500;}
+.confirm-detail-row span:last-child{color:var(--text);font-weight:700;}
+.confirm-wa-badge{background:#F0FFF5;border:1.5px solid #A5D6A7;border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;font-size:13px;color:#1B5E20;font-weight:600;}
+.notif-btn{width:100%;border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.2s;}
+.notif-btn:hover{opacity:0.88;}
+.notif-wa{background:#25D366;color:#fff;}
+.secure-badge{display:flex;align-items:center;gap:8px;background:#F0FFF5;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:#166534;font-weight:500;}
+
+/* ── CONFIGURATOR ── */
+.cfg-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:5000;}
+.cfg-overlay.open{display:block;}
+.cfg-modal{position:fixed;inset:0;z-index:5001;display:none;align-items:center;justify-content:center;padding:20px;pointer-events:none;}
+.cfg-modal.open{display:flex;}
+.cfg-inner{background:var(--white);border-radius:16px;width:100%;max-width:820px;max-height:90vh;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.25);display:flex;pointer-events:all;animation:cfgIn 0.28s cubic-bezier(0.4,0,0.2,1);}
+@keyframes cfgIn{from{opacity:0;transform:scale(0.95) translateY(16px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.cfg-visual{width:42%;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:36px 24px;position:relative;overflow:hidden;transition:background 0.5s;}
+.cfg-visual-img{width:260px;height:260px;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 28px 36px rgba(0,0,0,0.16));transition:opacity 0.3s,transform 0.3s;}
+.cfg-visual-emoji{font-size:100px;line-height:1;position:relative;z-index:2;}
+.cfg-visual-badge{position:absolute;top:16px;left:16px;z-index:10;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;padding:3px 9px;border-radius:4px;}
+.cfg-visual-badge.new{background:var(--green);color:#fff;}
+.cfg-visual-badge.sale{background:var(--accent);color:#fff;}
+.cfg-options{flex:1;overflow-y:auto;padding:32px 28px 28px;display:flex;flex-direction:column;}
+.cfg-close{position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.07);border:none;border-radius:6px;width:32px;height:32px;font-size:13px;font-weight:700;cursor:pointer;color:var(--text2);z-index:20;display:flex;align-items:center;justify-content:center;transition:background 0.15s;}
+.cfg-close:hover{background:rgba(0,0,0,0.13);}
+.cfg-eyebrow{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:4px;}
+.cfg-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(18px,2.5vw,24px);font-weight:700;color:var(--text);letter-spacing:-0.3px;line-height:1.2;margin-bottom:20px;}
+.cfg-section{margin-bottom:20px;}
+.cfg-section-label{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:8px;}
+.cfg-section-label strong{color:var(--text);}
+.cfg-colors{display:flex;flex-wrap:wrap;gap:8px;}
+.cfg-color-dot{width:28px;height:28px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;outline:none;flex-shrink:0;}
+.cfg-color-dot:hover{transform:scale(1.15);}
+.cfg-color-dot.active{box-shadow:0 0 0 2.5px var(--white),0 0 0 4.5px var(--accent);transform:scale(1.08);}
+.cfg-storage-pills{display:flex;flex-wrap:wrap;gap:7px;}
+.cfg-storage-pill{padding:7px 15px;border-radius:6px;border:1.5px solid var(--sep);font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;font-family:inherit;background:var(--white);transition:all 0.18s;}
+.cfg-storage-pill:hover{border-color:var(--accent);color:var(--accent);}
+.cfg-storage-pill.active{background:var(--text);color:#fff;border-color:var(--text);}
+.cfg-price-area{margin-top:auto;padding-top:16px;}
+.cfg-old-price{font-size:13px;color:var(--text2);text-decoration:line-through;display:block;margin-bottom:2px;}
+.cfg-price-main{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;color:var(--text);letter-spacing:-0.5px;}
+.cfg-add-btn{width:100%;margin-top:14px;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background 0.2s,transform 0.15s;}
+.cfg-add-btn:hover{background:var(--accent-h);transform:scale(1.01);}
+.cfg-summary{font-size:11px;color:var(--text2);text-align:center;margin-top:6px;line-height:1.6;}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(60px);background:rgba(17,17,16,0.92);backdrop-filter:blur(16px);color:#fff;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;z-index:4000;display:flex;align-items:center;gap:8px;opacity:0;transition:all 0.28s cubic-bezier(0.4,0,0.2,1);}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+
+/* ── FLOATING BUTTONS ── */
+.fab-stack{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:1500;}
+.fab-btn{width:52px;height:52px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;position:relative;text-decoration:none;}
+.fab-btn:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(0,0,0,0.32);}
+.fab-whatsapp{background:#25d366;}
+.fab-cart-fab{background:var(--accent);}
+.fab-badge{position:absolute;top:-4px;right:-4px;background:var(--dark);color:#fff;font-size:9px;font-weight:800;min-width:17px;height:17px;border-radius:9999px;display:flex;align-items:center;justify-content:center;padding:0 3px;opacity:0;transition:opacity 0.2s;pointer-events:none;}
+.fab-badge.show{opacity:1;}
+
+/* ── ADMIN ── */
+.adm-new-btn{display:block;margin:10px 12px 4px;padding:9px 14px;background:#0071e3;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;width:calc(100% - 24px);text-align:left;}
+.adm-new-btn:hover{background:#0077ed;}
+.adm-add-row{background:none;border:1px dashed #0071e3;color:#0071e3;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;margin-top:4px;}
+.adm-add-row:hover{background:#f0f6ff;}
+.adm-del-row{background:none;border:none;color:#ef4444;font-size:16px;cursor:pointer;padding:2px 6px;line-height:1;flex-shrink:0;}
+.adm-del-product{display:flex;align-items:center;gap:7px;background:transparent;border:1.5px solid #ef4444;color:#ef4444;border-radius:7px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.18s;}
+.adm-del-product:hover{background:#ef4444;color:#fff;}
+.adm-del-product:disabled{opacity:0.5;cursor:not-allowed;}
+.adm-sel{border:1px solid #d2d2d7;border-radius:6px;padding:7px 10px;font-size:13px;color:#1d1d1f;outline:none;background:#fff;font-family:inherit;}
+.adm-sel:focus{border-color:#0071e3;}
+.adm-color-pick{width:36px;height:34px;border:1px solid #d2d2d7;border-radius:6px;cursor:pointer;padding:2px;flex-shrink:0;}
+.adm-divider{border:none;border-top:1px solid #e5e5e7;margin:16px 0;}
+.adm-prod-tag{font-size:10px;background:#f5f5f7;color:#86868b;border-radius:4px;padding:1px 5px;margin-left:6px;font-weight:600;}
+.adm-prod-tag.custom{background:#e8f4ff;color:#0071e3;}
+.adm-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10000;align-items:center;justify-content:center;}
+.adm-ov.open{display:flex;}
+.adm-box{background:#fff;width:93%;max-width:1060px;height:88vh;border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 32px 100px rgba(0,0,0,.45);}
+.adm-top{padding:14px 22px;border-bottom:1px solid #e5e5e7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.adm-top h1{font-size:16px;font-weight:700;color:#1d1d1f;margin:0;}
+.adm-x{background:none;border:none;font-size:18px;cursor:pointer;color:#86868b;padding:4px 8px;border-radius:6px;line-height:1;}
+.adm-x:hover{background:#f5f5f7;}
+.adm-body{display:flex;flex:1;overflow:hidden;}
+.adm-sb{width:220px;min-width:180px;background:#f5f5f7;border-right:1px solid #e5e5e7;overflow-y:auto;padding:10px 0;}
+.adm-sb-lbl{font-size:10px;font-weight:700;color:#86868b;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px 8px;}
+.adm-item{padding:8px 14px;cursor:pointer;font-size:13px;font-weight:500;color:#1d1d1f;transition:background .12s;}
+.adm-item:hover{background:#eaeaec;}
+.adm-item.on{background:#E84520;color:#fff;}
+.adm-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+.adm-main{flex:1;overflow-y:auto;padding:20px 24px;}
+.adm-main h2{font-size:18px;font-weight:700;color:#1d1d1f;margin:0 0 16px;}
+.adm-sec{margin-bottom:20px;}
+.adm-sec-t{font-size:10px;font-weight:700;color:#86868b;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+.adm-row{display:flex;align-items:center;gap:9px;margin-bottom:8px;flex-wrap:wrap;}
+.adm-lbl{font-size:12px;color:#1d1d1f;font-weight:500;min-width:100px;flex-shrink:0;}
+.adm-in{border:1px solid #d2d2d7;border-radius:6px;padding:6px 10px;font-size:13px;color:#1d1d1f;width:140px;outline:none;font-family:inherit;}
+.adm-in:focus{border-color:#E84520;box-shadow:0 0 0 3px rgba(232,69,32,.12);}
+.adm-in-w{width:260px;}
+.adm-th{width:42px;height:42px;border-radius:6px;object-fit:contain;background:#f5f5f7;border:1px solid #e5e5e7;flex-shrink:0;}
+.adm-ph{width:42px;height:42px;border-radius:6px;background:#f5f5f7;border:1px dashed #c7c7cc;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#c7c7cc;}
+.adm-fl{font-size:11px;color:#0071e3;cursor:pointer;font-weight:600;white-space:nowrap;text-decoration:underline;}
+.adm-dot{width:13px;height:13px;border-radius:50%;flex-shrink:0;border:1.5px solid rgba(0,0,0,.12);}
+.adm-bar{padding:12px 24px;border-top:1px solid #e5e5e7;display:flex;gap:10px;justify-content:flex-end;background:#fff;flex-shrink:0;}
+.adm-save{background:#E84520;color:#fff;border:none;padding:8px 22px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;}
+.adm-save:hover{background:#CC3A18;}
+.adm-save.ok{background:#22c55e;}
+.adm-cls{background:#fff;color:#E84520;border:1px solid #E84520;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;}
+.adm-note{font-size:12px;color:#86868b;margin-top:4px;}
+
+/* ── RESPONSIVE ── */
+/* ── MENÚ HAMBURGUER MÓVIL ── */
+.nav-burger{display:none;background:rgba(255,255,255,0.08);border:none;border-radius:8px;width:38px;height:38px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;}
+.nav-burger span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform 0.25s, opacity 0.25s;}
+.nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-burger.open span:nth-child(2){opacity:0;}
+.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mobile-menu-overlay{display:none;position:fixed;inset:60px 0 0 0;background:rgba(17,17,16,0.97);backdrop-filter:blur(8px);z-index:899;padding:30px 5%;flex-direction:column;gap:0;animation:mobMenuIn 0.25s ease;overflow-y:auto;}
+.mobile-menu-overlay.open{display:flex;}
+.mobile-menu-overlay a{color:#fff;font-size:20px;font-weight:600;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.08);letter-spacing:-0.3px;display:flex;align-items:center;justify-content:space-between;}
+.mobile-menu-overlay a:hover, .mobile-menu-overlay a:active{color:var(--accent);}
+.mobile-menu-overlay a .arrow{color:rgba(255,255,255,0.3);font-size:18px;}
+.mobile-menu-overlay .mob-mayorista{color:#22c55e;}
+.mobile-menu-overlay .mob-foot{margin-top:auto;padding:24px 0;text-align:center;font-size:12px;color:rgba(255,255,255,0.4);}
+@keyframes mobMenuIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:820px){
+  .nav-links{display:none;}
+  .nav-burger{display:flex;}
+  .hero{flex-direction:column;padding:48px 5% 0;min-height:auto;}
+  .hero-text{max-width:100%;padding-bottom:0;}
+  .hero-phones{width:100%;min-height:280px;margin-top:24px;}
+  .hero-phone-main{height:260px;margin-right:0;}
+  .hero-phone-back{height:210px;right:28%;}
+  .hero-slide img{max-height:260px;}
+  .hero-slideshow{min-height:280px;}
+  .stats-strip{grid-template-columns:1fr 1fr;gap:16px;}
+  .promo-grid{grid-template-columns:1fr;}
+  .cart-sidebar{width:100%;right:-100%;}
+  .cfg-inner{flex-direction:column;max-height:95vh;}
+  .cfg-visual{width:100%;height:200px;padding:20px;}
+  .cfg-visual-img{width:180px;height:200px;}
+  .cfg-options{padding:20px;}
+  .footer-top{grid-template-columns:1fr;}
+  /* Admin móvil */
+  .adm-box{width:96%;height:94vh;}
+  .adm-top{flex-wrap:wrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 12px;gap:6px;}
+  .adm-top h1{font-size:15px;width:100%;margin-bottom:4px;}
+  .adm-top button{font-size:11px !important;padding:6px 10px !important;white-space:nowrap;flex-shrink:0;}
+  .adm-body{flex-direction:column;}
+  .adm-sb{width:100%;min-width:0;max-height:140px;border-right:none;border-bottom:1px solid #e5e5e7;display:flex;flex-wrap:wrap;gap:4px;padding:8px;}
+  .adm-sb .adm-sb-lbl{display:none;}
+  .adm-sb #admList{display:flex;flex-wrap:wrap;gap:4px;width:100%;}
+  .adm-sb .adm-item{padding:6px 10px;font-size:11px;flex:0 0 auto;border-radius:5px;}
+  .adm-wrap{flex:1;min-height:0;}
+  .adm-main{padding:14px;}
+  /* Banner mayorista en móvil */
+  #mayoristaBanner{flex-direction:column;align-items:flex-start;gap:8px;}
+  #mayoristaBanner>div{width:100%;justify-content:space-between;}
+}
+@media(max-width:500px){
+  .stats-strip{grid-template-columns:1fr 1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .hero h1{font-size:42px;line-height:1.05;}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .product-card{border-radius:8px;}
+  .product-info{padding:10px;}
+  .product-name{font-size:13px;}
+  .price-main{font-size:14px;}
+  .add-btn{font-size:11px;padding:5px 10px;}
+  nav{padding:0 4%;}
+  .nav-logo{font-size:17px;}
+  .section{padding:40px 4%;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#" id="navLogo" onclick="handleLogoClick(event)">diprosa<span class="dot">.</span>gt</a>
+  <ul class="nav-links">
+    <li><a href="#productos" onclick="filterNav('iphone')">iPhone</a></li>
+    <li><a href="#productos" onclick="filterNav('samsung')">Samsung</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#mayoristas" id="navMayoristas" onclick="openMayoristaLogin();return false;" style="color:#a8a89c;">🏪 Mayoristas</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-icon-btn" onclick="toggleCart()" title="Carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+    <button class="nav-burger" id="navBurger" onclick="toggleMobileMenu()" title="Menú" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <a href="#productos" onclick="filterNav('all');closeMobileMenu();">Todos los celulares <span class="arrow">→</span></a>
+  <a href="#productos" onclick="filterNav('iphone');closeMobileMenu();">📱 iPhone <span class="arrow">→</span></a>
+  <a href="#productos" onclick="filterNav('samsung');closeMobileMenu();">📱 Samsung <span class="arrow">→</span></a>
+  <a href="#contacto" onclick="closeMobileMenu();">Contacto <span class="arrow">→</span></a>
+  <a href="#mayoristas" class="mob-mayorista" onclick="closeMobileMenu();openMayoristaLogin();return false;">🏪 Área Mayoristas <span class="arrow">→</span></a>
+  <div class="mob-foot">Diprosa GT · Celulares desbloqueados</div>
+</div>
+
+<!-- BANNER MAYORISTAS (hidden por default) -->
+<div id="mayoristaBanner" style="display:none;background:linear-gradient(90deg,#064e3b,#0c8550);color:#fff;padding:10px 5%;font-size:13px;font-weight:600;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="font-size:18px;">🏪</span>
+    <span>Modo Mayorista activo — viendo precios al por mayor</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <span id="mayoristaSavingsPill" style="background:rgba(255,255,255,0.18);padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;letter-spacing:0.3px;"></span>
+    <button onclick="logoutMayorista()" style="background:rgba(255,255,255,0.18);color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;">Cerrar sesión</button>
+  </div>
+</div>
+
+<!-- MODAL LOGIN MAYORISTAS -->
+<div id="mayoristaLoginOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);z-index:1500;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:14px;padding:32px;max-width:380px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,0.4);">
+    <div style="text-align:center;margin-bottom:18px;">
+      <div style="font-size:42px;margin-bottom:6px;">🏪</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#111;margin-bottom:4px;">Área Mayoristas</h2>
+      <p style="font-size:13px;color:#6B6B63;line-height:1.5;">Ingresa tu código de acceso para ver precios al por mayor</p>
+    </div>
+    <input type="text" id="mayoristaCodeInput" placeholder="Código de acceso" autocomplete="off"
+      style="width:100%;padding:13px 14px;border:1.5px solid #E4E3DE;border-radius:8px;font-size:15px;font-weight:600;text-align:center;letter-spacing:1px;text-transform:uppercase;font-family:'Space Grotesk',monospace;margin-bottom:14px;outline:none;"
+      onkeydown="if(event.key==='Enter')submitMayoristaCode();">
+    <div id="mayoristaLoginError" style="display:none;background:#fee2e2;color:#991b1b;padding:8px 12px;border-radius:6px;font-size:12px;font-weight:600;margin-bottom:12px;text-align:center;"></div>
+    <button onclick="submitMayoristaCode()" style="width:100%;background:#0c8550;color:#fff;border:none;border-radius:8px;padding:13px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:8px;">Entrar al área mayorista</button>
+    <button onclick="closeMayoristaLogin()" style="width:100%;background:transparent;color:#6B6B63;border:none;padding:8px;font-size:13px;font-weight:500;cursor:pointer;">Cancelar</button>
+    <div style="text-align:center;margin-top:14px;font-size:11px;color:#86868b;line-height:1.5;">
+      ¿No tienes código?<br/><a href="https://wa.me/50246778504?text=Hola%20Diprosa,%20me%20interesa%20el%20acceso%20mayorista" target="_blank" style="color:#0c8550;font-weight:600;text-decoration:none;">Solicítalo por WhatsApp →</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-tag">Guatemala · SIM Free</div>
+    <h1>Celulares<br/><em>sin fronteras.</em></h1>
+    <p class="hero-sub">iPhone y Samsung desbloqueados, revisados y con garantía. Listos para usar con cualquier operador.</p>
+    <div class="hero-ctas">
+      <button class="btn-accent" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver catálogo</button>
+      <a class="btn-ghost" href="https://wa.me/50246778504?text=Hola%20Diprosa!%20Quiero%20información" target="_blank">Hablar con asesor</a>
+    </div>
+  </div>
+  <div class="hero-phones hero-slideshow">
+    <!-- Slide 1: Samsung -->
+    <div class="hero-slide active" id="slide-0">
+      <img src="samsung-s26.png.png" alt="Samsung Galaxy S26"/>
+      <div class="slide-brand-pill">Samsung Galaxy S26</div>
+    </div>
+    <!-- Slide 2: iPhone -->
+    <div class="hero-slide" id="slide-1">
+      <img src="iphone-16promax.png.png" alt="iPhone 17 Pro Max"/>
+      <div class="slide-brand-pill">iPhone 17 Pro Max</div>
+    </div>
+    <!-- Indicadores -->
+    <div class="slide-dots">
+      <button class="slide-dot active" onclick="goToSlide(0)"></button>
+      <button class="slide-dot" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+    <div class="hero-accent-bar"></div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="stat-num">+5,000</div>
+    <div class="stat-label">Clientes satisfechos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">SIM Free desbloqueado</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">Garantía</div>
+    <div class="stat-label">Hasta 1 año</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Revisados y originales</div>
+  </div>
+</div>
+
+<!-- PRODUCTOS -->
+<div id="productos" style="background:var(--bg);">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-tag">Catálogo</div>
+      <h2>Nuestros productos</h2>
+      <p>Todos desbloqueados, listos para usar con cualquier operador en Guatemala</p>
+    </div>
+    <div class="filter-row">
+      <button class="filter-pill active" onclick="setFilter(this,'all')">Todos</button>
+      <button class="filter-pill" onclick="setFilter(this,'iphone')">iPhone</button>
+      <button class="filter-pill" onclick="setFilter(this,'samsung')">Samsung</button>
+      <span class="filter-sep">|</span>
+      <span class="sort-label">Precio:</span>
+      <button class="sort-pill" onclick="setSortOrder(this,'price-asc')">↑ Menor</button>
+      <button class="sort-pill active" onclick="setSortOrder(this,'price-desc')">↓ Mayor</button>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</div>
+
+<!-- PROMOS -->
+<div style="background:var(--white);">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-tag">Beneficios</div>
+      <h2>Más que un celular</h2>
+    </div>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <div class="promo-text">
+          <div class="promo-eyebrow">Trade-In</div>
+          <h3>Trae tu equipo anterior.</h3>
+          <p>Ahorra hasta Q2,000 canjeando tu celular. Cotiza sin compromiso.</p>
+          <a href="https://wa.me/50246778504?text=Hola!%20Quiero%20cotizar%20mi%20Trade-In" target="_blank" class="btn-accent-sm">Cotizar Trade-In →</a>
+        </div>
+        <div class="promo-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" aria-label="Trade-In: Usado → Nuevo">
+            <!-- Glow behind NUEVO phone -->
+            <ellipse cx="418" cy="212" rx="138" ry="152" fill="#3a0c06"/>
+            <!-- ── LEFT PHONE (USADO) tilted -12deg ── -->
+            <g transform="rotate(-12 165 210)">
+              <rect x="105" y="98" width="120" height="218" rx="18" fill="#232323" stroke="#636363" stroke-width="4.5"/>
+              <rect x="116" y="120" width="98" height="155" rx="5" fill="#141414"/>
+              <!-- Spider crack -->
+              <line x1="162" y1="170" x2="148" y2="150" stroke="#4e4e4e" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="162" y1="170" x2="150" y2="195" stroke="#4e4e4e" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="162" y1="170" x2="175" y2="163" stroke="#4e4e4e" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="162" y1="170" x2="168" y2="210" stroke="#4e4e4e" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="168" y1="210" x2="148" y2="238" stroke="#4e4e4e" stroke-width="2" stroke-linecap="round"/>
+              <line x1="168" y1="210" x2="182" y2="240" stroke="#4e4e4e" stroke-width="1.6" stroke-linecap="round"/>
+              <!-- Speaker slot -->
+              <rect x="148" y="107" width="34" height="5" rx="2.5" fill="#3c3c3c"/>
+              <!-- Home button -->
+              <circle cx="165" cy="300" r="9" fill="#2a2a2a" stroke="#5a5a5a" stroke-width="3"/>
+            </g>
+            <!-- ── RIGHT PHONE (NUEVO) tilted +10deg ── -->
+            <g transform="rotate(10 415 210)">
+              <rect x="355" y="98" width="120" height="218" rx="18" fill="#1a1a1a" stroke="#E8431A" stroke-width="5"/>
+              <rect x="366" y="120" width="98" height="155" rx="5" fill="#bf3310"/>
+              <!-- Camera punch-hole -->
+              <circle cx="451" cy="131" r="7.5" fill="#0d0d0d" stroke="#E8431A" stroke-width="2.5"/>
+              <!-- Speaker slot -->
+              <rect x="398" y="107" width="34" height="5" rx="2.5" fill="#2a2a2a"/>
+              <!-- Bottom dot -->
+              <circle cx="415" cy="299" r="7" fill="#0d0d0d" stroke="#E8431A" stroke-width="2.5"/>
+            </g>
+            <!-- ── ARROWS ── -->
+            <!-- → right (top) -->
+            <line x1="248" y1="192" x2="316" y2="192" stroke="#E8431A" stroke-width="5" stroke-linecap="round"/>
+            <polygon points="308,183 332,192 308,201" fill="#E8431A"/>
+            <!-- ← left (bottom) -->
+            <line x1="252" y1="228" x2="320" y2="228" stroke="#E8431A" stroke-width="5" stroke-linecap="round"/>
+            <polygon points="260,219 236,228 260,237" fill="#E8431A"/>
+            <!-- ── LABELS ── -->
+            <text x="165" y="385" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="4" fill="#787878">USADO</text>
+            <text x="415" y="385" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="4" fill="#E8431A">NUEVO</text>
+          </svg>
+        </div>
+      </div>
+      <div class="promo-card" style="background:var(--dark);">
+        <div class="promo-text">
+          <div class="promo-eyebrow">Garantía</div>
+          <h3>Tu tranquilidad, garantizada.</h3>
+          <p>Modelos recientes con 1 año, modelos anteriores con 6 meses de garantía.</p>
+          <a href="https://wa.me/50246778504?text=Hola!%20Quiero%20info%20sobre%20garantías" target="_blank" class="btn-accent-sm">Ver garantías →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div style="background:var(--bg);">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-tag">Reseñas</div>
+      <h2>Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"El mejor servicio en Guatemala. Mi iPhone llegó perfecto. ¡Totalmente recomendado!"</p>
+        <div class="test-author">
+          <div class="test-avatar-init">AG</div>
+          <div><div class="test-name">Ana González</div><div class="test-loc">Cliente verificado · Guatemala</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Excelente atención y productos 100% originales. El Samsung que compré está perfecto."</p>
+        <div class="test-author">
+          <div class="test-avatar-init">CM</div>
+          <div><div class="test-name">Carlos Méndez</div><div class="test-loc">Cliente verificado · Quetzaltenango</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Gran variedad y precios competitivos. Me orientaron perfectamente para elegir el modelo correcto."</p>
+        <div class="test-author">
+          <div class="test-avatar-init">MR</div>
+          <div><div class="test-name">Mario Ramos</div><div class="test-loc">Cliente verificado · Cobán</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Muy rápidos coordinando la entrega por WhatsApp. El equipo llegó en excelentes condiciones."</p>
+        <div class="test-author">
+          <div class="test-avatar-init">LP</div>
+          <div><div class="test-name">Lucía Pérez</div><div class="test-loc">Cliente verificado · Antigua</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">diprosa<span class="dot">.</span>gt</div>
+      <div class="footer-tagline">Celulares desbloqueados, revisados y con garantía en Guatemala. Apple y Samsung originales.</div>
+      <div class="footer-contact">
+        <a href="tel:+50246778504">📞 +502 4677-8504</a>
+        <a href="tel:+50235150283">📞 +502 3515-0283</a>
+        <a href="https://wa.me/50246778504" target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-links-col">
+      <h4>Navegación</h4>
+      <a href="#productos">iPhone</a>
+      <a href="#productos">Samsung</a>
+      <a href="https://wa.me/50246778504?text=Hola!%20Quiero%20info%20sobre%20Trade-In" target="_blank">Trade-In</a>
+      <a href="https://wa.me/50246778504?text=Hola!%20Quiero%20info%20sobre%20garantías" target="_blank">Garantías</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Diprosa Guatemala. Apple y Samsung son marcas registradas de sus respectivos dueños.</p>
+    <div class="footer-socials">
+      <a class="social-btn" href="#" title="Facebook">📘</a>
+      <a class="social-btn" href="#" title="Instagram">📸</a>
+      <a class="social-btn" href="https://wa.me/50246778504" target="_blank" title="WhatsApp">💬</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h2>Tu carrito</h2>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span class="empty-icon">🛍️</span>
+      <p>Tu carrito está vacío</p>
+      <small>¡Agrega algunos productos!</small>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">Q0.00</span></div>
+    <div class="cart-total"><span>Total</span><span id="cartTotal">Q0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()" disabled>
+      🔒 Realizar pedido
+    </button>
+    <p class="cart-payment-note">Pago seguro · Efectivo · Transferencia · Visa · Mastercard</p>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <h3 id="modalTitle">Datos del comprador</h3>
+        <p id="modalSubtitle">Paso 1 de 3 · Tu información</p>
+      </div>
+      <button class="modal-close" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-steps">
+      <div class="modal-step active" id="step1Tab"><div class="step-num">1</div><br/>Tus datos</div>
+      <div class="modal-step" id="step2Tab"><div class="step-num">2</div><br/>Pago</div>
+      <div class="modal-step" id="step3Tab"><div class="step-num">3</div><br/>Listo</div>
+    </div>
+    <!-- Step 1 -->
+    <div id="step1" class="modal-body">
+      <div class="form-row">
+        <div class="form-group"><label>Nombre *</label><input type="text" id="firstName" placeholder="Juan"/></div>
+        <div class="form-group"><label>Apellido *</label><input type="text" id="lastName" placeholder="García"/></div>
+      </div>
+      <div class="form-group"><label>Correo electrónico *</label><input type="email" id="email" placeholder="juan@correo.com"/></div>
+      <div class="form-group"><label>Teléfono / WhatsApp *</label><input type="tel" id="phone" placeholder="+502 5555-0000"/></div>
+      <div class="form-group"><label>Dirección de entrega *</label><input type="text" id="address" placeholder="Zona 10, Ciudad de Guatemala"/></div>
+      <div class="form-group"><label>Notas adicionales (opcional)</label><textarea id="notes" placeholder="Ej: Color preferido, horario de entrega, preguntas..."></textarea></div>
+    </div>
+    <div id="step1Footer" class="modal-footer">
+      <button class="btn-back" onclick="closeCheckout()">Cancelar</button>
+      <button class="btn-next" onclick="goToStep2()">Continuar →</button>
+    </div>
+    <!-- Step 2 -->
+    <div id="step2" class="modal-body" style="display:none">
+      <div class="order-summary" id="orderSummary2"></div>
+      <div class="form-group">
+        <label style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;display:block">Método de pago *</label>
+        <div class="pay-method-grid">
+          <button class="pay-method-btn" onclick="selectPayMethod(this,'efectivo')"><span class="pm-icon">💵</span>Contra entrega en efectivo</button>
+          <button class="pay-method-btn" onclick="selectPayMethod(this,'transferencia')"><span class="pm-icon">🏦</span>Transferencia bancaria</button>
+          <button class="pay-method-btn" onclick="selectPayMethod(this,'tarjeta_contado')"><span class="pm-icon">💳</span>Tarjeta al contado</button>
+          <button class="pay-method-btn" onclick="selectPayMethod(this,'visa_cuotas')"><span class="pm-icon">🔄</span>Visa en cuotas</button>
+        </div>
+      </div>
+      <div id="cuotasSection" style="display:none">
+        <div class="visa-cuotas-note">⚠️ Las cuotas serán validadas y confirmadas por nuestro equipo antes de procesar tu pedido.</div>
+        <label style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;display:block">Número de cuotas *</label>
+        <div class="cuotas-grid">
+          <button class="cuota-btn" onclick="selectCuotas(this,3)"><span class="cuota-num">3</span><span class="cuota-label">cuotas</span></button>
+          <button class="cuota-btn" onclick="selectCuotas(this,6)"><span class="cuota-num">6</span><span class="cuota-label">cuotas</span></button>
+          <button class="cuota-btn" onclick="selectCuotas(this,12)"><span class="cuota-num">12</span><span class="cuota-label">cuotas</span></button>
+          <button class="cuota-btn" onclick="selectCuotas(this,18)"><span class="cuota-num">18</span><span class="cuota-label">cuotas</span></button>
+          <button class="cuota-btn" onclick="selectCuotas(this,24)"><span class="cuota-num">24</span><span class="cuota-label">cuotas</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="step2Footer" class="modal-footer" style="display:none">
+      <button class="btn-back" onclick="goToStep1()">← Atrás</button>
+      <button class="btn-next" onclick="goToStep3()">Confirmar pedido →</button>
+    </div>
+    <!-- Step 3 -->
+    <div id="step3" class="modal-body" style="display:none">
+      <div class="confirm-icon">✅</div>
+      <div class="confirm-title">¡Orden recibida!</div>
+      <div class="confirm-subtitle">Tu solicitud fue registrada.<br/>Te contactaremos por WhatsApp para coordinar el pago y entrega.</div>
+      <div class="confirm-detail-box" id="confirmDetails"></div>
+      <div class="confirm-wa-badge">
+        <span style="font-size:22px">📲</span>
+        <span>Te escribiremos al: <strong id="confirmPhone"></strong></span>
+      </div>
+      <div style="margin-top:12px;font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Notificar también por:</div>
+      <div id="notifBtns" style="display:flex;flex-direction:column;gap:8px;"></div>
+    </div>
+    <div id="step3Footer" class="modal-footer" style="display:none">
+      <button class="btn-back" onclick="closeCheckout()" style="color:var(--text2)">Cerrar</button>
+      <button class="btn-next" onclick="closeCheckout()" style="background:var(--green)">✓ Listo</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIGURATOR -->
+<div class="cfg-overlay" id="cfgOverlay" onclick="closeConfigurator()"></div>
+<div class="cfg-modal" id="cfgModal">
+  <div class="cfg-inner" id="cfgInner">
+    <button class="cfg-close" onclick="closeConfigurator()">✕</button>
+    <div class="cfg-visual" id="cfgVisual">
+      <span class="cfg-visual-badge" id="cfgBadge" style="display:none"></span>
+      <div id="cfgImgHolder"></div>
+    </div>
+    <div class="cfg-options">
+      <div class="cfg-eyebrow" id="cfgBrand"></div>
+      <div class="cfg-title" id="cfgTitle">Producto</div>
+      <div class="cfg-section">
+        <div class="cfg-section-label">Color: <strong id="cfgColorName"></strong></div>
+        <div class="cfg-colors" id="cfgColors"></div>
+      </div>
+      <div class="cfg-section" id="cfgStorageSection">
+        <div class="cfg-section-label" id="cfgStorageLabel">Almacenamiento:</div>
+        <div class="cfg-storage-pills" id="cfgStoragePills"></div>
+      </div>
+      <div class="cfg-price-area">
+        <span class="cfg-old-price" id="cfgOldPrice" style="display:none"></span>
+        <div class="cfg-price-main" id="cfgPriceMain">Q0</div>
+        <button class="cfg-add-btn" onclick="addFromConfigurator()">Agregar al carrito</button>
+        <div class="cfg-summary" id="cfgSummary"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FABs -->
+<div class="fab-stack">
+  <a class="fab-btn fab-whatsapp" href="https://wa.me/50246778504?text=Hola%20Diprosa!%20Me%20interesa%20un%20producto" target="_blank" rel="noopener" title="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.554 4.111 1.523 5.84L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.034-1.387l-.36-.214-3.742.886.918-3.645-.235-.374A9.814 9.814 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  </a>
+  <button class="fab-btn fab-cart-fab" onclick="toggleCart()" title="Carrito">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span class="fab-badge" id="fabCartBadge">0</span>
+  </button>
+</div>
+
+<!-- ADMIN PANEL OVERLAY -->
+<div id="admOv" class="adm-ov">
+  <div class="adm-box">
+    <div class="adm-top">
+      <h1>⚙️ Panel Admin · Diprosa</h1>
+      <button onclick="testFirebase()" style="background:#7c3aed;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;">🔌 Probar Firebase</button>
+      <button onclick="diagnoseFirebase()" style="background:#0891b2;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;">🔬 Ver qué hay en Firebase</button>
+      <button onclick="cleanFirebaseNulls()" style="background:#f59e0b;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;">🧹 Limpiar basura</button>
+      <button onclick="changeMayoristaCode()" style="background:#0c8550;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;">🔑 Código mayorista</button>
+      <button onclick="wipeAllImages()" style="background:#dc2626;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;">🗑️ Borrar TODAS las imágenes</button>
+      <button class="adm-x" onclick="admClose()">✕</button>
+    </div>
+    <div class="adm-body">
+      <div class="adm-sb">
+        <div class="adm-sb-lbl">Productos</div>
+        <div id="admList"></div>
+        <button class="adm-new-btn" onclick="admNewForm()">+ Agregar producto</button>
+      </div>
+      <div class="adm-wrap">
+        <div class="adm-main" id="admMain"><p style="color:#86868b;margin-top:60px;text-align:center;">← Selecciona un producto o agrega uno nuevo</p></div>
+        <div class="adm-bar">
+          <button class="adm-cls" onclick="admClose()">Cerrar</button>
+          <button class="adm-save" id="admSaveBtn" onclick="admSave()">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ══ FIREBASE INIT ══ */
+/* ── FIREBASE REST (sin SDK) ── */
+const FB = 'https://diprosagt-3d782-default-rtdb.firebaseio.com';
+
+/* ══ BASE IMAGES ══ */
+const IMGS = {}
+
+/* ══ PRODUCTS ══ */
+let products = [
+    {
+      id:2, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 16 Pro', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Titanio Natural',  hex:'#b5a896', bg:'#e8e0d4', img: null /* imagen base = Natural */ },
+        { name:'Negro Titanio',    hex:'#3a3832', bg:'#d0ceca', img: null /* FOTO: iPhone 16 Pro - Negro Titanio */ },
+        { name:'Titanio Blanco',   hex:'#e5ddd0', bg:'#f2ede4', img: null /* FOTO: iPhone 16 Pro - Titanio Blanco */ },
+        { name:'Desierto Titanio', hex:'#c8a97a', bg:'#f0e8d4', img: null /* FOTO: iPhone 16 Pro - Desierto Titanio */ },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q6,999' },
+        { label:'256 GB', price:'Q7,999' },
+        { label:'512 GB', price:'Q9,499' },
+      ]
+    },
+    {
+      id:3, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 16', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Azul Ultramar', hex:'#3d6bb5', bg:'#dde8f8', img: null /* FOTO: iPhone 16 - Azul Ultramar */ },
+        { name:'Rosa',          hex:'#f0a8b8', bg:'#fce8f0', img: null /* FOTO: iPhone 16 - Rosa */ },
+        { name:'Verde Menta',   hex:'#7aba8a', bg:'#dcf2e2', img: null /* FOTO: iPhone 16 - Verde Menta */ },
+        { name:'Negro',         hex:'#1d1d1f', bg:'#e0e0e2', img: null /* FOTO: iPhone 16 - Negro */ },
+        { name:'Blanco',        hex:'#f5f5f7', bg:'#fafafa', img: null /* FOTO: iPhone 16 - Blanco */ },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q5,499', oldPrice:'Q5,999' },
+        { label:'256 GB', price:'Q6,499' },
+        { label:'512 GB', price:'Q7,499' },
+      ]
+    },
+    {
+      id:4, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 15', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Rosa',     hex:'#f0a8b8', bg:'#fce8f0', img: null /* FOTO: iPhone 15 - Rosa */ },
+        { name:'Amarillo', hex:'#e8d060', bg:'#faf5d8', img: null /* FOTO: iPhone 15 - Amarillo */ },
+        { name:'Verde',    hex:'#7aba8a', bg:'#dcf2e2', img: null /* FOTO: iPhone 15 - Verde */ },
+        { name:'Azul',     hex:'#6a9ad0', bg:'#dce8f8', img: null /* FOTO: iPhone 15 - Azul */ },
+        { name:'Negro',    hex:'#1d1d1f', bg:'#e0e0e2', img: null /* FOTO: iPhone 15 - Negro */ },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q4,299', oldPrice:'Q5,199' },
+        { label:'256 GB', price:'Q5,299' },
+      ]
+    },
+    {
+      id:5, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S25 Ultra', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Titanio',   hex:'#2a2828', bg:'#d0cece', img: null },
+        { name:'Gris Titanio',    hex:'#6b6b70', bg:'#e2e2e5', img: null },
+        { name:'Azul Titanio',    hex:'#3a5a8a', bg:'#d8e4f5', img: null },
+        { name:'Blanco Titanio',  hex:'#e8e8ec', bg:'#f5f5f8', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q8,499', oldPrice:'Q9,199' },
+        { label:'512 GB', price:'Q9,999' },
+        { label:'1 TB',   price:'Q11,499' },
+      ]
+    },
+    {
+      id:6, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S25+', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',    hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Plata',    hex:'#c0c0c4', bg:'#ececee', img: null },
+        { name:'Azul Marino', hex:'#2a3a5a', bg:'#d0d8f0', img: null },
+        { name:'Menta',    hex:'#78b890', bg:'#d8f0e2', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q6,499' },
+        { label:'512 GB', price:'Q7,799' },
+      ]
+    },
+    {
+      id:7, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S25', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',    hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Azul',     hex:'#4a80c8', bg:'#d8e8f8', img: null },
+        { name:'Menta',    hex:'#78b890', bg:'#d8f0e2', img: null },
+        { name:'Dorado',   hex:'#c8a850', bg:'#f8f0d8', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q4,999', oldPrice:'Q5,699' },
+        { label:'256 GB', price:'Q5,799' },
+      ]
+    },
+    {
+      id:14, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy Z Fold 6', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',      hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Plata',      hex:'#c0c0c4', bg:'#ececee', img: null },
+        { name:'Azul Marino',hex:'#2a3a5a', bg:'#d0d8f0', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q12,999' },
+        { label:'512 GB', price:'Q14,499' },
+        { label:'1 TB',   price:'Q16,999' },
+      ]
+    },
+    {
+      id:15, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy Z Flip 6', badge:'', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',    hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Menta',    hex:'#78b890', bg:'#d8f0e2', img: null },
+        { name:'Amarillo', hex:'#e8d060', bg:'#faf5d8', img: null },
+        { name:'Azul',     hex:'#4a80c8', bg:'#d8e8f8', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q6,999', oldPrice:'Q7,499' },
+        { label:'512 GB', price:'Q7,999' },
+      ]
+    },
+    {
+      id:16, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 11', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',   hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco',  hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Rojo',    hex:'#bf0909', bg:'#f5d8d8', img: null },
+        { name:'Amarillo',hex:'#e8d060', bg:'#faf5d8', img: null },
+        { name:'Verde',   hex:'#7aba8a', bg:'#dcf2e2', img: null },
+        { name:'Morado',  hex:'#8a6a9a', bg:'#e8d8f5', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q2,499' },
+      ]
+    },
+    {
+      id:17, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 12', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',  hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco', hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Azul',   hex:'#6a9ad0', bg:'#dce8f8', img: null },
+        { name:'Rojo',   hex:'#bf0909', bg:'#f5d8d8', img: null },
+        { name:'Verde',  hex:'#7aba8a', bg:'#dcf2e2', img: null },
+      ],
+      storage:[
+        { label:'64 GB',  price:'Q2,799' },
+        { label:'128 GB', price:'Q2,999' },
+      ]
+    },
+    {
+      id:18, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 13', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',  hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco', hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Azul',   hex:'#6a9ad0', bg:'#dce8f8', img: null },
+        { name:'Rosa',   hex:'#f0a8b8', bg:'#fce8f0', img: null },
+        { name:'Verde',  hex:'#7aba8a', bg:'#dcf2e2', img: null },
+        { name:'Rojo',   hex:'#bf0909', bg:'#f5d8d8', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q3,499' },
+      ]
+    },
+    {
+      id:19, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 13 Pro Max', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Grafito',      hex:'#4a4a4c', bg:'#d8d8da', img: null },
+        { name:'Plata',        hex:'#c8c8cc', bg:'#f0f0f2', img: null },
+        { name:'Dorado',       hex:'#c8a850', bg:'#f8f0d8', img: null },
+        { name:'Azul Sierra',  hex:'#4a7a9a', bg:'#d8eaf5', img: null },
+        { name:'Verde Alpino', hex:'#4a7a5a', bg:'#d8f0e2', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q4,499' },
+        { label:'256 GB', price:'Q5,299' },
+      ]
+    },
+    {
+      id:20, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 14 Plus', badge:'sale', img:null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',   hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco',  hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Azul',    hex:'#6a9ad0', bg:'#dce8f8', img: null },
+        { name:'Morado',  hex:'#8a6a9a', bg:'#e8d8f5', img: null },
+        { name:'Amarillo',hex:'#e8d060', bg:'#faf5d8', img: null },
+        { name:'Rojo',    hex:'#bf0909', bg:'#f5d8d8', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q4,499' },
+      ]
+    },
+    {
+      id:21, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 14 Pro Max', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Plata',         hex:'#c8c8cc', bg:'#f0f0f2', img: null },
+        { name:'Negro',         hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Dorado',        hex:'#c8a850', bg:'#f8f0d8', img: null },
+        { name:'Morado Oscuro', hex:'#4a3a5a', bg:'#dcd8e8', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q5,499' },
+        { label:'256 GB', price:'Q6,299' },
+      ]
+    },
+    {
+      id:22, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 15 Pro Max', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Titanio',   hex:'#3a3832', bg:'#1e1e1e', img: null },
+        { name:'Azul Titanio',    hex:'#3a5a8a', bg:'#d8e4f5', img: null },
+        { name:'Titanio Natural', hex:'#b5a896', bg:'#e6ddd4', img: null },
+        { name:'Titanio Blanco',  hex:'#e5ddd0', bg:'#f0efed', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q7,499' },
+        { label:'512 GB', price:'Q8,499' },
+      ]
+    },
+    {
+      id:23, cat:'iphone', icon:'📱', brand:'Apple', name:'iPhone 17 Pro Max', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Blanco',  hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Naranja', hex:'#e86a2a', bg:'#f9e0d0', img: null },
+      ],
+      storage:[
+        { label:'256 GB eSIM', price:'Q9,999' },
+      ]
+    },
+    {
+      id:24, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S21 Ultra', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Fantasma', hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Plata Fantasma', hex:'#c0c0c4', bg:'#ececee', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q3,499' },
+      ]
+    },
+    {
+      id:25, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S22 Ultra', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Fantasma',  hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco Fantasma', hex:'#f5f5f7', bg:'#fafafa', img: null },
+        { name:'Burdeos',         hex:'#7a1a2a', bg:'#f0d8dc', img: null },
+        { name:'Verde',           hex:'#2a5a3a', bg:'#d0e8d8', img: null },
+      ],
+      storage:[
+        { label:'128 GB', price:'Q4,499' },
+        { label:'256 GB', price:'Q5,299' },
+        { label:'512 GB', price:'Q6,299' },
+      ]
+    },
+    {
+      id:26, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S23 Ultra', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Fantasma',   hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Crema Fantasma',   hex:'#e8e0d0', bg:'#f5f0e8', img: null },
+        { name:'Verde Fantasma',   hex:'#3a5a4a', bg:'#d0e8dc', img: null },
+        { name:'Lavanda Fantasma', hex:'#8a7aaa', bg:'#e8e4f5', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q5,999' },
+      ]
+    },
+    {
+      id:27, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S24 Ultra', badge:'sale', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro Titanio',    hex:'#2a2828', bg:'#d0cece', img: null },
+        { name:'Gris Titanio',     hex:'#6b6b70', bg:'#e2e2e5', img: null },
+        { name:'Violeta Titanio',  hex:'#5a4a7a', bg:'#e0daf0', img: null },
+        { name:'Amarillo Titanio', hex:'#c8a850', bg:'#f8f0d8', img: null },
+      ],
+      storage:[
+        { label:'256 GB', price:'Q7,499' },
+      ]
+    },
+    {
+      id:28, cat:'samsung', icon:'📱', brand:'Samsung', name:'Galaxy S26 Ultra', badge:'new', img: null,
+      storageLabel:'Almacenamiento',
+      colors:[
+        { name:'Negro',  hex:'#1d1d1f', bg:'#e0e0e2', img: null },
+        { name:'Blanco', hex:'#f5f5f7', bg:'#fafafa', img: null },
+      ],
+      storage:[
+        { label:'512 GB', price:'Q11,499' },
+      ]
+    },
+  ];
+
+let cart = [];
+let currentFilter = 'all';
+let currentSort = 'price-desc';
+
+/* ── MAYORISTAS ── */
+const MAYORISTA_DEFAULT_CODE = 'DIPRO2025';
+let MAYORISTA_CODE = MAYORISTA_DEFAULT_CODE; // se carga de Firebase si existe
+let isMayorista = false;
+
+function getPrice(storage){
+  if(isMayorista && storage.priceWholesale && parsePrice(storage.priceWholesale)>0){
+    return storage.priceWholesale;
+  }
+  return storage.price;
+}
+function getRetailPrice(storage){ return storage.price; }
+function hasWholesale(storage){
+  return !!(storage && storage.priceWholesale && parsePrice(storage.priceWholesale)>0);
+}
+function getSavings(storage){
+  if(!hasWholesale(storage)) return 0;
+  return Math.max(0, parsePrice(storage.price) - parsePrice(storage.priceWholesale));
+}
+
+/* ── PRICE PARSER ── */
+function parsePrice(str){
+  if(!str) return 0;
+  return parseFloat(str.replace(/[^0-9.]/g,''))||0;
+}
+
+/* ── RENDER PRODUCTS ── */
+function renderProducts(filter){
+  if(filter===undefined) filter=currentFilter;
+  const grid=document.getElementById('productGrid');
+  let filtered=filter==='all'?[...products]:products.filter(p=>p.cat===filter);
+  if(currentSort==='price-asc') filtered.sort((a,b)=>parsePrice(getPrice(a.storage[0]))-parsePrice(getPrice(b.storage[0])));
+  else filtered.sort((a,b)=>parsePrice(getPrice(b.storage[0]))-parsePrice(getPrice(a.storage[0]))); // default: mayor a menor
+  grid.innerHTML=filtered.map(p=>{
+    const avail=p.colors.filter(c=>!c.disabled);
+    const c0=avail[0]||p.colors[0];
+    const s0=p.storage[0];
+    const displayPrice = getPrice(s0);
+    const showSavings = isMayorista && hasWholesale(s0);
+    // Buscar la primera imagen disponible entre TODOS los colores (no solo el primero)
+    const firstWithImg=p.colors.find(c=>c.img && c.img.length>20);
+    const cardImg=fixImgUrl((firstWithImg && firstWithImg.img) || c0.img || null);
+    const dots=avail.slice(0,5).map(c=>`<div class="color-mini-dot" style="background:${c.hex};${(c.hex==='#f5f5f7'||c.hex==='#e5ddd0')?'border:1.5px solid #ccc;':''}"></div>`).join('');
+    const more=avail.length>5?`<span class="color-mini-more">+${avail.length-5}</span>`:'';
+    const out=p.inStock===false;
+    const badge=out
+      ?'<div class="product-badge" style="background:#6B6B63">Agotado</div>'
+      :(showSavings
+        ? `<div class="product-badge wholesale">Mayorista</div>`
+        :(p.badge?`<div class="product-badge ${p.badge}">${p.badge==='new'?'Nuevo':'Oferta'}</div>`:''));
+    return `
+    <div class="product-card" onclick="${out?'':(`openConfigurator(${p.id})`)}" style="${out?'opacity:.5;cursor:not-allowed;':''}">
+      ${badge}
+      <div class="product-img-wrap">
+        ${cardImg
+          ?`<img src="${cardImg}" alt="${p.name}" referrerpolicy="no-referrer">`
+          :`<div class="prod-placeholder"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17.5" r="0.8" fill="#ccc"/></svg><span>${p.name}</span></div>`}
+      </div>
+      <div class="product-info">
+        <div class="product-brand">${p.brand}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="color-mini-row">${dots}${more}</div>
+        <div class="product-footer">
+          <div>
+            ${showSavings
+              ? `<div class="price-old">${s0.price}</div>`
+              : (s0.oldPrice?`<div class="price-old">${s0.oldPrice}</div>`:'')}
+            <span class="price-main">${displayPrice}</span>
+          </div>
+          <button class="add-btn" ${out?'disabled style="opacity:.4;cursor:not-allowed;"':(`onclick="event.stopPropagation();openConfigurator(${p.id})"`)}>
+            ${out?'Agotado':'Elegir'}
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setFilter(btn,filter){
+  document.querySelectorAll('.filter-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter=filter;
+  renderProducts(filter);
+}
+function filterNav(cat){
+  const pill=document.querySelector(`.filter-pill[onclick*="'${cat}'"]`);
+  if(pill) setFilter(pill,cat);
+}
+function setSortOrder(btn,sort){
+  document.querySelectorAll('.sort-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentSort=sort;
+  renderProducts(currentFilter);
+}
+
+/* ── CONFIGURATOR ── */
+let cfgProduct=null,cfgColorIdx=0,cfgStorageIdx=0;
+
+function openConfigurator(id){
+  cfgProduct=products.find(p=>p.id===id);
+  cfgColorIdx=Math.max(0,cfgProduct.colors.findIndex(c=>!c.disabled));
+  cfgStorageIdx=0;
+  renderConfigurator();
+  document.getElementById('cfgOverlay').classList.add('open');
+  document.getElementById('cfgModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeConfigurator(){
+  document.getElementById('cfgOverlay').classList.remove('open');
+  document.getElementById('cfgModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function fixImgUrl(url){
+  if(!url) return null;
+  // Convierte link de Google Drive a link directo de imagen
+  const driveMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  if(driveMatch) return 'https://drive.google.com/uc?export=view&id='+driveMatch[1];
+  // Link corto de Drive
+  const driveMatch2 = url.match(/drive\.google\.com\/open\?id=([^&]+)/);
+  if(driveMatch2) return 'https://drive.google.com/uc?export=view&id='+driveMatch2[1];
+  return url;
+}
+function renderConfigurator(){
+  const p=cfgProduct;
+  const color=p.colors[cfgColorIdx];
+  const storage=p.storage[cfgStorageIdx];
+  document.getElementById('cfgBrand').textContent=p.brand;
+  document.getElementById('cfgTitle').textContent=p.name;
+  const badgeEl=document.getElementById('cfgBadge');
+  if(p.badge){badgeEl.textContent=p.badge==='new'?'Nuevo':'Oferta';badgeEl.className='cfg-visual-badge '+p.badge;badgeEl.style.display='block';}
+  else badgeEl.style.display='none';
+  document.getElementById('cfgVisual').style.background=color.bg||'#F5F4F0';
+  const holder=document.getElementById('cfgImgHolder');
+  // Si el color activo no tiene imagen, busca cualquier otra disponible (sin fallback a p.img hardcoded)
+  const firstAvail=p.colors.find(c=>c.img && c.img.length>20);
+  const imgSrc=fixImgUrl(color.img || (firstAvail && firstAvail.img) || null);
+  if(imgSrc){
+    const ex=holder.querySelector('img');
+    if(ex&&ex.getAttribute('src')!==imgSrc){
+      ex.style.opacity='0';ex.style.transform='scale(0.93)';
+      setTimeout(()=>{
+        holder.innerHTML=`<img class="cfg-visual-img" src="${imgSrc}" alt="${p.name}" referrerpolicy="no-referrer">`;
+        const ni=holder.querySelector('img');
+        ni.style.transition='opacity 0.28s,transform 0.28s';ni.style.opacity='0';ni.style.transform='scale(0.93)';
+        requestAnimationFrame(()=>{ni.style.opacity='1';ni.style.transform='scale(1)';});
+      },120);
+    } else if(!ex){
+      holder.innerHTML=`<img class="cfg-visual-img" src="${imgSrc}" alt="${p.name}" referrerpolicy="no-referrer">`;
+    }
+  } else {
+    holder.innerHTML=`<span class="cfg-visual-emoji">${p.icon}</span>`;
+  }
+  document.getElementById('cfgColorName').textContent=color.name;
+  document.getElementById('cfgColors').innerHTML=p.colors.map((c,i)=>c.disabled?'':`
+    <button class="cfg-color-dot ${i===cfgColorIdx?'active':''}"
+      style="background:${c.hex};${(c.hex==='#f5f5f7'||c.hex==='#e5ddd0')?'outline:1.5px solid #ccc;outline-offset:0;':''}"
+      title="${c.name}" onclick="selectCfgColor(${i})"></button>`).join('');
+  document.getElementById('cfgStorageLabel').textContent=(p.storageLabel||'Almacenamiento')+':';
+  const onlyOne=p.storage.length===1;
+  document.getElementById('cfgStorageSection').style.display=onlyOne?'none':'block';
+  document.getElementById('cfgStoragePills').innerHTML=p.storage.map((s,i)=>
+    `<button class="cfg-storage-pill ${i===cfgStorageIdx?'active':''}" onclick="selectCfgStorage(${i})">${s.label}</button>`).join('');
+  const oldEl=document.getElementById('cfgOldPrice');
+  const showWS = isMayorista && hasWholesale(storage);
+  if(showWS){
+    oldEl.textContent=storage.price; // muestra retail tachado
+    oldEl.style.display='block';
+  } else if(storage.oldPrice){
+    oldEl.textContent=storage.oldPrice;
+    oldEl.style.display='block';
+  } else {
+    oldEl.style.display='none';
+  }
+  document.getElementById('cfgPriceMain').textContent=getPrice(storage);
+  // Etiqueta de ahorro si es mayorista
+  let savingsEl=document.getElementById('cfgSavings');
+  if(showWS){
+    const save=getSavings(storage);
+    if(!savingsEl){
+      savingsEl=document.createElement('div');
+      savingsEl.id='cfgSavings';
+      savingsEl.style.cssText='margin-top:6px;font-size:12px;font-weight:700;color:#0c8550;background:#dcfce7;padding:4px 10px;border-radius:4px;display:inline-block;';
+      document.getElementById('cfgPriceMain').parentElement.appendChild(savingsEl);
+    }
+    savingsEl.textContent='💼 Ahorras Q'+save.toLocaleString('es-GT')+' c/u (precio mayorista)';
+    savingsEl.style.display='inline-block';
+  } else if(savingsEl){
+    savingsEl.style.display='none';
+  }
+  document.getElementById('cfgSummary').textContent=`${p.name} · ${color.name} · ${storage.label}`;
+}
+function selectCfgColor(idx){cfgColorIdx=idx;renderConfigurator();}
+function selectCfgStorage(idx){cfgStorageIdx=idx;renderConfigurator();}
+function addFromConfigurator(){
+  const p=cfgProduct;
+  const color=p.colors[cfgColorIdx];
+  const storage=p.storage[cfgStorageIdx];
+  const cartKey=`${p.id}-${cfgColorIdx}-${cfgStorageIdx}`;
+  const ex=cart.find(i=>i.cartKey===cartKey);
+  if(ex) ex.qty++;
+  else cart.push({...p,cartKey,qty:1,selectedColor:color.name,selectedStorage:storage.label,price:getPrice(storage),retailPrice:storage.price,isMayorista:isMayorista&&hasWholesale(storage),specs:`${storage.label} · ${color.name}`});
+  updateCart();
+  showToast(`✓ ${p.name} · ${color.name} · ${storage.label}`);
+  closeConfigurator();
+}
+
+/* ── CART ── */
+function removeFromCart(cartKey){cart=cart.filter(i=>i.cartKey!==cartKey);updateCart();}
+function changeQty(cartKey,delta){
+  const item=cart.find(i=>i.cartKey===cartKey);if(!item)return;
+  item.qty+=delta;if(item.qty<=0)removeFromCart(cartKey);else updateCart();
+}
+function updateCart(){
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cartCount').textContent=count;
+  const fab=document.getElementById('fabCartBadge');if(fab){fab.textContent=count;fab.classList.toggle('show',count>0);}
+  const total=cart.reduce((s,i)=>s+parsePrice(i.price)*i.qty,0);
+  const totalRetail=cart.reduce((s,i)=>s+parsePrice(i.retailPrice||i.price)*i.qty,0);
+  const ahorro=Math.max(0,totalRetail-total);
+  const fmt=v=>`Q${v.toLocaleString('es-GT',{minimumFractionDigits:2})}`;
+  document.getElementById('cartSubtotal').textContent=fmt(total);
+  document.getElementById('cartTotal').textContent=fmt(total);
+  // Mostrar ahorro mayorista si aplica
+  const sub=document.getElementById('cartSubtotal');
+  if(sub){
+    const parent=sub.closest('.cart-row')||sub.parentElement;
+    let ahorroEl=document.getElementById('cartSavingsLine');
+    if(ahorro>0){
+      if(!ahorroEl && parent){
+        ahorroEl=document.createElement('div');
+        ahorroEl.id='cartSavingsLine';
+        ahorroEl.style.cssText='display:flex;justify-content:space-between;align-items:center;background:#dcfce7;color:#0c8550;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700;margin:8px 0;';
+        parent.parentElement.insertBefore(ahorroEl,parent);
+      }
+      if(ahorroEl) ahorroEl.innerHTML='<span>💼 Ahorro mayorista</span><span>− '+fmt(ahorro)+'</span>';
+    } else if(ahorroEl){ ahorroEl.remove(); }
+  }
+  document.getElementById('checkoutBtn').disabled=cart.length===0;
+  const container=document.getElementById('cartItems');
+  if(cart.length===0){
+    container.innerHTML=`<div class="cart-empty"><span class="empty-icon">🛍️</span><p>Tu carrito está vacío</p><small>¡Agrega algunos productos!</small></div>`;
+  } else {
+    container.innerHTML=cart.map(item=>{
+      const tag=item.isMayorista?'<span style="background:#0c8550;color:#fff;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:6px;letter-spacing:.5px;">MAYORISTA</span>':'';
+      return `
+      <div class="cart-item">
+        <div class="cart-item-icon">${item.icon}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}${tag}</div>
+          <div class="cart-item-price">${item.selectedColor} · ${item.selectedStorage} · ${item.price}</div>
+        </div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="changeQty('${item.cartKey}',-1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty('${item.cartKey}',+1)">+</button>
+        </div>
+        <button class="remove-btn" onclick="removeFromCart('${item.cartKey}')">✕</button>
+      </div>`;
+    }).join('');
+  }
+}
+function toggleCart(){
+  document.getElementById('cartSidebar').classList.toggle('open');
+  document.getElementById('cartOverlay').classList.toggle('open');
+  closeMobileMenu();
+}
+
+/* ── MENÚ MÓVIL ── */
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const burger=document.getElementById('navBurger');
+  const open=menu.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const burger=document.getElementById('navBurger');
+  if(menu){menu.classList.remove('open');}
+  if(burger){burger.classList.remove('open');}
+  document.body.style.overflow='';
+}
+
+/* ── CHECKOUT ── */
+let selectedCuotas=null, selectedPayMethod=null;
+
+function selectPayMethod(btn,method){
+  document.querySelectorAll('.pay-method-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedPayMethod=method;
+  document.getElementById('cuotasSection').style.display=(method==='visa_cuotas')?'block':'none';
+  if(method!=='visa_cuotas'){selectedCuotas=null;document.querySelectorAll('.cuota-btn').forEach(b=>b.classList.remove('active'));}
+}
+function selectCuotas(btn,num){
+  document.querySelectorAll('.cuota-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');selectedCuotas=num;
+}
+function openCheckout(){
+  if(cart.length===0)return;
+  selectedCuotas=null;selectedPayMethod=null;
+  document.getElementById('checkoutModal').classList.add('open');
+  goToStep1();
+}
+function closeCheckout(){
+  document.getElementById('checkoutModal').classList.remove('open');
+  selectedCuotas=null;selectedPayMethod=null;
+  document.querySelectorAll('.cuota-btn').forEach(b=>b.classList.remove('active'));
+}
+function goToStep1(){
+  ['step1','step1Footer'].forEach(id=>document.getElementById(id).style.display=id.includes('Footer')?'flex':'block');
+  ['step2','step2Footer','step3','step3Footer'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('step1Tab').classList.add('active');
+  document.getElementById('step2Tab').classList.remove('active');
+  document.getElementById('step3Tab').classList.remove('active');
+  document.getElementById('modalTitle').textContent='Datos del comprador';
+  document.getElementById('modalSubtitle').textContent='Paso 1 de 3 · Tu información';
+}
+function goToStep2(){
+  const fields=['firstName','lastName','email','phone','address'];
+  let valid=true;
+  fields.forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el.value.trim()){el.classList.add('error');valid=false;}
+    else el.classList.remove('error');
+  });
+  if(!valid){showToast('⚠️ Completa todos los campos obligatorios');return;}
+  const total=cart.reduce((s,i)=>s+parsePrice(i.price)*i.qty,0);
+  const fmt=v=>`Q${v.toLocaleString('es-GT',{minimumFractionDigits:2})}`;
+  document.getElementById('orderSummary2').innerHTML=`
+    <div class="order-summary-title">Resumen del pedido</div>
+    ${cart.map(i=>`<div class="order-item-row"><span>${i.name} × ${i.qty}</span><span>${i.price}</span></div>`).join('')}
+    <div class="order-total-row"><span>Total</span><span>${fmt(total)}</span></div>
+  `;
+  ['step1','step1Footer'].forEach(id=>document.getElementById(id).style.display='none');
+  ['step2','step2Footer'].forEach(id=>document.getElementById(id).style.display=id.includes('Footer')?'flex':'block');
+  ['step3','step3Footer'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('step1Tab').classList.remove('active');
+  document.getElementById('step2Tab').classList.add('active');
+  document.getElementById('step3Tab').classList.remove('active');
+  document.getElementById('modalTitle').textContent='Método de pago';
+  document.getElementById('modalSubtitle').textContent='Paso 2 de 3 · Elige cómo pagar';
+}
+
+/* ── EMAIL / ORDER ── */
+const DIPROSA_EMAIL='pabloajmonterroso@gmail.com';
+const DIPROSA_WHATSAPP='50246778504';
+const EMAILJS_SERVICE_ID='service_gl7dkce';
+const EMAILJS_TEMPLATE_ID='template_dl1i6k8';
+
+function buildOrderText(name,phone,address,email,notes,items,total,pagoDisplay,orderId){
+  const anyMay=items.some(i=>i.isMayorista);
+  const lines=items.map(i=>{
+    const tag=i.isMayorista?' [🏪 MAYORISTA]':'';
+    const savings=i.isMayorista&&i.retailPrice?` (retail era ${i.retailPrice})`:'';
+    return `* ${i.name} (${i.selectedStorage} - ${i.selectedColor}) x${i.qty} - ${i.price}${tag}${savings}`;
+  }).join('\r\n');
+  const header=anyMay?'🏪 PEDIDO MAYORISTA - DIPROSA':'NUEVO PEDIDO DIPROSA';
+  let totalRetail=0;
+  items.forEach(i=>{
+    const ref=i.retailPrice||i.price;
+    totalRetail+=parsePrice(ref)*i.qty;
+  });
+  const savingsLine=anyMay?`AHORRO vs retail: Q${(totalRetail-total).toLocaleString('es-GT',{minimumFractionDigits:2})}\r\n`:'';
+  return `${header}\r\n`+
+    `--------------------\r\n`+
+    `Orden: ${orderId}\r\n`+
+    `Cliente: ${name}\r\n`+
+    `Celular: ${phone}\r\n`+
+    `Correo: ${email}\r\n`+
+    `Dirección: ${address}\r\n`+
+    (notes?`Notas: ${notes}\r\n`:'')+
+    `--------------------\r\n`+
+    `${lines}\r\n`+
+    `--------------------\r\n`+
+    `Pago: ${pagoDisplay}\r\n`+
+    `TOTAL: Q${total.toLocaleString('es-GT',{minimumFractionDigits:2})}\r\n`+
+    savingsLine+
+    `--------------------\r\n`+
+    `Contactar al cliente para coordinar entrega.`;
+}
+
+function goToStep3(){
+  if(!selectedPayMethod){showToast('⚠️ Selecciona el método de pago');return;}
+  if(selectedPayMethod==='visa_cuotas'&&!selectedCuotas){showToast('⚠️ Selecciona el número de cuotas');return;}
+  const total=cart.reduce((s,i)=>s+parsePrice(i.price)*i.qty,0);
+  const fmt=v=>`Q${v.toLocaleString('es-GT',{minimumFractionDigits:2})}`;
+  const phone=document.getElementById('phone').value;
+  const email=document.getElementById('email').value;
+  const address=document.getElementById('address').value;
+  const notes=document.getElementById('notes').value.trim();
+  const name=document.getElementById('firstName').value+' '+document.getElementById('lastName').value;
+  const anyMay=cart.some(i=>i.isMayorista);
+  const orderId=(anyMay?'DIPM-':'DIP-')+Date.now()+'-'+Math.floor(Math.random()*900+100);
+  const payLabels={efectivo:'Contra entrega en efectivo',transferencia:'Transferencia bancaria',tarjeta_contado:'Tarjeta al contado',visa_cuotas:'Visa en cuotas'};
+  const cuotasLabel=selectedCuotas?`${selectedCuotas} cuotas`:'';
+  const cuotaMonto=(selectedPayMethod==='visa_cuotas'&&selectedCuotas)?` (≈ ${fmt(total/selectedCuotas)} / cuota)`:'';
+  const pagoDisplay=selectedPayMethod==='visa_cuotas'
+    ?`Visa · ${cuotasLabel}${cuotaMonto} — ⚠️ Pendiente validación`
+    :payLabels[selectedPayMethod];
+  const orderItems=[...cart];
+  const orderText=buildOrderText(name,phone,address,email,notes,orderItems,total,pagoDisplay,orderId);
+
+  document.getElementById('confirmDetails').innerHTML=`
+    <div class="confirm-detail-row"><span>Orden</span><span style="font-family:monospace;font-size:11px">${orderId}</span></div>
+    <div class="confirm-detail-row"><span>Cliente</span><span>${name}</span></div>
+    <div class="confirm-detail-row"><span>Celular</span><span>${phone}</span></div>
+    <div class="confirm-detail-row"><span>Correo</span><span style="font-size:11px">${email}</span></div>
+    <div class="confirm-detail-row"><span>Dirección</span><span style="font-size:11px">${address}</span></div>
+    ${notes?`<div class="confirm-detail-row"><span>Notas</span><span style="font-size:11px">${notes}</span></div>`:''}
+    ${orderItems.map(i=>`<div class="confirm-detail-row"><span>${i.icon} ${i.name} × ${i.qty}</span><span>${i.price}</span></div>`).join('')}
+    <div class="confirm-detail-row"><span>Total</span><span style="color:var(--accent);font-size:15px">${fmt(total)}</span></div>
+    <div class="confirm-detail-row"><span>Pago</span><span>${pagoDisplay}</span></div>
+  `;
+  document.getElementById('confirmPhone').textContent=phone;
+
+  const waText=encodeURIComponent(orderText);
+  document.getElementById('notifBtns').innerHTML=`
+    <div id="emailStatus" style="background:#F0FFF5;border:1.5px solid #BBF7D0;border-radius:8px;padding:12px 14px;font-size:13px;font-weight:600;color:#166534;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:16px">📨</span><span>Enviando orden por email...</span>
+    </div>
+    <button class="notif-btn notif-wa" onclick="window.open('https://wa.me/${DIPROSA_WHATSAPP}?text='+decodeURIComponent('${waText}'),'_blank')">
+      💬 Enviar también por WhatsApp
+    </button>
+  `;
+
+  ['step1','step1Footer','step2','step2Footer'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('step3').style.display='block';
+  document.getElementById('step3Footer').style.display='flex';
+  document.getElementById('step1Tab').classList.remove('active');
+  document.getElementById('step2Tab').classList.remove('active');
+  document.getElementById('step3Tab').classList.add('active');
+  document.getElementById('modalTitle').textContent='¡Orden confirmada!';
+  document.getElementById('modalSubtitle').textContent='Paso 3 de 3 · Pedido registrado';
+
+  emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,{
+    name:name,
+    time:new Date().toLocaleString('es-GT',{dateStyle:'short',timeStyle:'short'}),
+    message:orderText
+  }).then(()=>{
+    const s=document.getElementById('emailStatus');
+    if(s){s.innerHTML='<span style="font-size:16px">✅</span><span>¡Orden enviada al equipo de Diprosa!</span>';}
+  }).catch(err=>{
+    console.error('EmailJS:',err);
+    const s=document.getElementById('emailStatus');
+    if(s){s.style.background='#FFF0F0';s.style.borderColor='#FECACA';s.style.color='var(--red)';s.innerHTML='<span style="font-size:16px">⚠️</span><span>No se pudo enviar el email — usa el botón de WhatsApp</span>';}
+  });
+  cart=[];updateCart();
+  document.getElementById('cartSidebar').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+}
+
+/* ── TOAST ── */
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+/* ── MAYORISTAS: LOGIN, LOGOUT, ROUTING ── */
+const MAYORISTA_SESSION_KEY='diprosa_mayorista_v1';
+const MAYORISTA_SESSION_HOURS=12; // sesión expira en 12 horas
+
+async function loadMayoristaCode(){
+  try{
+    const r=await fetch(FB+'/config/mayoristaCode.json?_='+Date.now(),{cache:'no-store'});
+    const code=await r.json();
+    if(code && typeof code==='string') MAYORISTA_CODE=code;
+    else MAYORISTA_CODE=MAYORISTA_DEFAULT_CODE;
+  }catch(e){
+    MAYORISTA_CODE=MAYORISTA_DEFAULT_CODE;
+  }
+}
+
+function openMayoristaLogin(){
+  if(isMayorista){
+    // Ya está logueado → toggle: si clickea de nuevo, le pregunta si cerrar sesión
+    if(confirm('Ya estás en modo mayorista. ¿Cerrar sesión?')) logoutMayorista();
+    return;
+  }
+  document.getElementById('mayoristaLoginOverlay').style.display='flex';
+  setTimeout(()=>{const el=document.getElementById('mayoristaCodeInput');if(el){el.value='';el.focus();}},80);
+  document.getElementById('mayoristaLoginError').style.display='none';
+}
+function closeMayoristaLogin(){
+  document.getElementById('mayoristaLoginOverlay').style.display='none';
+  if(location.hash==='#mayoristas') history.replaceState(null,'',location.pathname);
+}
+function submitMayoristaCode(){
+  const input=document.getElementById('mayoristaCodeInput').value.trim().toUpperCase();
+  const err=document.getElementById('mayoristaLoginError');
+  if(!input){err.textContent='Ingresa un código';err.style.display='block';return;}
+  if(input!==MAYORISTA_CODE.toUpperCase()){
+    err.textContent='Código incorrecto. Solicítalo por WhatsApp si no lo tienes.';
+    err.style.display='block';
+    return;
+  }
+  // Login exitoso
+  const session={code:input, ts:Date.now()};
+  try{localStorage.setItem(MAYORISTA_SESSION_KEY,JSON.stringify(session));}catch(e){}
+  isMayorista=true;
+  applyMayoristaMode();
+  closeMayoristaLogin();
+  showToast('🏪 Bienvenido al área mayorista');
+}
+function logoutMayorista(){
+  isMayorista=false;
+  try{localStorage.removeItem(MAYORISTA_SESSION_KEY);}catch(e){}
+  applyMayoristaMode();
+  showToast('Sesión mayorista cerrada');
+}
+function restoreMayoristaSession(){
+  try{
+    const raw=localStorage.getItem(MAYORISTA_SESSION_KEY);
+    if(!raw) return;
+    const s=JSON.parse(raw);
+    if(!s || !s.ts) return;
+    const hours=(Date.now()-s.ts)/(1000*60*60);
+    if(hours>MAYORISTA_SESSION_HOURS){
+      localStorage.removeItem(MAYORISTA_SESSION_KEY);
+      return;
+    }
+    if(s.code && s.code.toUpperCase()===MAYORISTA_CODE.toUpperCase()){
+      isMayorista=true;
+    }
+  }catch(e){}
+}
+function applyMayoristaMode(){
+  document.body.classList.toggle('mayorista-mode', isMayorista);
+  const link=document.getElementById('navMayoristas');
+  if(link) link.innerHTML=isMayorista?'🏪 Cerrar sesión':'🏪 Mayoristas';
+  // recalcular ahorros totales para mostrarlos en el banner
+  if(isMayorista){
+    let totalSavings=0;
+    products.forEach(p=>{
+      p.storage.forEach(s=>{ if(hasWholesale(s)) totalSavings+=getSavings(s); });
+    });
+    const pill=document.getElementById('mayoristaSavingsPill');
+    if(pill) pill.textContent= totalSavings>0 ? `Ahorras hasta Q${totalSavings.toLocaleString('es-GT')} en el catálogo`:'';
+  }
+  renderProducts();
+}
+function handleMayoristaHash(){
+  if(location.hash==='#mayoristas' && !isMayorista){
+    openMayoristaLogin();
+  }
+}
+window.addEventListener('hashchange',handleMayoristaHash);
+
+/* ── INVENTORY (localStorage) ── */
+const STORAGE_KEY='diprosa_inventory_v2';
+// Limpiar localStorage si está lleno o tiene imágenes viejas
+try{localStorage.removeItem(STORAGE_KEY);}catch(e){}
+// Contraseña ofuscada — no es seguridad real, pero no está en texto plano
+const _ap=atob('ZGlwcm9zYTIwMjU='); // diprosa2025
+
+async function loadInventory(){
+  try{
+    // cache-busting timestamp + no-store para evitar que el navegador sirva data vieja
+    const r=await fetch(FB+'/inventory.json?_=' + Date.now(), {cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status+' al leer Firebase');
+    const data=await r.json();
+    const kbTotal=Math.round(JSON.stringify(data||{}).length/1024);
+    const nProds=Object.keys(data||{}).length;
+    console.log('[LOAD] kb='+kbTotal+' products='+nProds);
+    window._fbDiag={ok:true, kb:kbTotal, products:nProds, ts:new Date().toISOString()};
+    // 🔑 FIX CRITICO: filtrar nulls. Firebase puede devolver entradas null cuando un nodo fue borrado parcialmente
+    const fbList = data ? Object.values(data).filter(sp => sp && typeof sp === 'object' && sp.id != null) : [];
+    fbList.forEach(sp=>{console.log('[LOAD] id='+sp.id+' hasImg='+!!(sp.colors?.some?.(c=>c?.img?.length>50)));});
+    if(fbList.length===0){renderProducts();return;}
+
+    // Firebase tiene datos → es la fuente autoritativa
+    // 1. Actualizar/agregar productos que vienen de Firebase
+    fbList.forEach(sp=>{
+      // colors puede venir como array o como objeto (Firebase a veces convierte) → normalizar a array y filtrar nulls
+      const safeColors = sp.colors ? (Array.isArray(sp.colors) ? sp.colors : Object.values(sp.colors)).filter(c=>c && typeof c==='object') : null;
+      let p=products.find(x=>x.id===sp.id);
+      if(!p && sp.cat && sp.brand){
+        p={id:sp.id,cat:sp.cat,icon:'📱',brand:sp.brand,name:sp.name||'',
+           badge:sp.badge||'',img:null,inStock:!!sp.inStock,
+           storageLabel:'Almacenamiento',
+           colors:safeColors||[{name:'Negro',hex:'#1d1d1f',bg:'#e0e0e2',img:null}],
+           storage:sp.storage||[]};
+        products.push(p);
+        return;
+      }
+      if(!p)return;
+      if(sp.name!==undefined)p.name=sp.name;
+      if(sp.badge!==undefined)p.badge=sp.badge;
+      if(sp.inStock!==undefined)p.inStock=sp.inStock;
+      if(sp.storage)p.storage=sp.storage;
+      if(safeColors)p.colors=safeColors;
+    });
+
+    // 2. Eliminar del array local cualquier producto que NO está en Firebase
+    //    (fueron borrados desde el admin)
+    const fbIds=new Set(fbList.map(sp=>sp.id));
+    products=products.filter(p=>fbIds.has(p.id));
+
+  }catch(e){
+    console.warn('Firebase offline, usando datos locales:', e.message, e);
+    window._fbDiag={ok:false, error:e.message, ts:new Date().toISOString()};
+    // banner rojo visible si Firebase falla al cargar
+    setTimeout(()=>{
+      const b=document.createElement('div');
+      b.style.cssText='position:fixed;top:0;left:0;right:0;background:#dc2626;color:#fff;padding:10px;text-align:center;font-weight:700;z-index:9999;font-size:13px;';
+      b.innerHTML='⚠️ Firebase no responde — las imágenes no se cargarán de la nube. Error: '+e.message+' <button onclick="this.parentNode.remove()" style="margin-left:12px;background:#fff;color:#dc2626;border:none;padding:3px 10px;border-radius:4px;cursor:pointer;font-weight:700;">Cerrar</button>';
+      document.body.appendChild(b);
+    },800);
+  }
+  renderProducts();
+}
+/* Convierte un producto al formato que se guarda en Firebase */
+function productToFB(p){
+  return {
+    id:p.id, cat:p.cat, brand:p.brand, name:p.name, badge:p.badge||'',
+    inStock:!!p.inStock, storage:p.storage,
+    colors:p.colors.map(c=>({name:c.name,hex:c.hex,bg:c.bg||'#eeeeee',img:c.img||null,disabled:!!c.disabled}))
+  };
+}
+
+/* Guarda UN solo producto en su propio nodo → nunca falla por payload grande */
+async function saveProduct(p){
+  const payload=JSON.stringify(productToFB(p));
+  const kb=Math.round(payload.length/1024);
+  const hasImg=p.colors.some(c=>c.img&&c.img.length>50);
+  console.log('[SAVE] id='+p.id+' kb='+kb+' hasImages='+hasImg);
+  const res=await fetch(FB+'/inventory/'+p.id+'.json',{
+    method:'PUT',
+    headers:{'Content-Type':'application/json'},
+    body:payload,
+    cache:'no-store'
+  });
+  const resBody=await res.text();
+  console.log('[SAVE] status='+res.status+' ok='+res.ok+' body='+resBody.slice(0,120));
+  if(!res.ok) throw new Error('Firebase '+res.status+': '+resBody.slice(0,80));
+  // Verificar inmediatamente con cache-busting
+  const ver=await fetch(FB+'/inventory/'+p.id+'/colors.json?_='+Date.now(),{cache:'no-store'});
+  const cols=await ver.json();
+  const saved=Array.isArray(cols)?cols.some(c=>c&&c.img):Object.values(cols||{}).some(c=>c&&c.img);
+  console.log('[VERIFY] id='+p.id+' imagesStoredInFirebase='+saved+' colsType='+(Array.isArray(cols)?'array':typeof cols));
+  if(hasImg && !saved){
+    throw new Error('Firebase aceptó la escritura pero no guardó las imágenes. Probable problema de reglas o tamaño.');
+  }
+}
+
+/* Sincronización completa: guarda cada producto uno por uno */
+async function saveInventory(){
+  showToast('⏳ Sincronizando...');
+  let ok=0, fail=0;
+  for(const p of products){
+    try{ await saveProduct(p); ok++; }
+    catch(e){ fail++; console.warn('Error guardando',p.id,e); }
+  }
+  // localStorage: solo datos sin imágenes (evita quota exceeded)
+  try{
+    const snap=products.map(p=>({...productToFB(p),colors:p.colors.map(c=>({name:c.name,hex:c.hex,bg:c.bg||'#eeeeee',img:null,disabled:!!c.disabled}))}));
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(snap));
+  }catch(e){localStorage.removeItem(STORAGE_KEY);}
+  showToast(fail===0 ? `☁️ ${ok} productos sincronizados` : `⚠️ ${ok} OK, ${fail} fallaron`);
+}
+
+/* ── REMOCIÓN DE FONDO + COMPRESIÓN ── */
+function removeBackground(canvas, tolerance=40){
+  const w=canvas.width, h=canvas.height;
+  const ctx=canvas.getContext('2d');
+  const imageData=ctx.getImageData(0,0,w,h);
+  const d=imageData.data;
+
+  // Muestrea esquinas para detectar el color de fondo
+  function px(x,y){const i=(y*w+x)*4;return[d[i],d[i+1],d[i+2],d[i+3]];}
+  const corners=[px(0,0),px(w-1,0),px(0,h-1),px(w-1,h-1)];
+  const bgR=Math.round(corners.reduce((s,c)=>s+c[0],0)/4);
+  const bgG=Math.round(corners.reduce((s,c)=>s+c[1],0)/4);
+  const bgB=Math.round(corners.reduce((s,c)=>s+c[2],0)/4);
+
+  function dist(r,g,b){return Math.sqrt((r-bgR)**2+(g-bgG)**2+(b-bgB)**2);}
+
+  // BFS flood-fill desde todos los bordes
+  const visited=new Uint8Array(w*h);
+  const queue=[];
+
+  function seed(x,y){
+    if(x<0||y<0||x>=w||y>=h)return;
+    const idx=y*w+x;
+    if(visited[idx])return;
+    const i=idx*4;
+    if(d[i+3]<10){visited[idx]=1;return;}
+    if(dist(d[i],d[i+1],d[i+2])<=tolerance){visited[idx]=1;queue.push(idx);}
+  }
+
+  for(let x=0;x<w;x++){seed(x,0);seed(x,h-1);}
+  for(let y=0;y<h;y++){seed(0,y);seed(w-1,y);}
+
+  let qi=0;
+  while(qi<queue.length){
+    const idx=queue[qi++];
+    const x=idx%w, y=Math.floor(idx/w);
+    d[idx*4+3]=0; // transparente
+    for(const[nx,ny] of[[x-1,y],[x+1,y],[x,y-1],[x,y+1],[x-1,y-1],[x+1,y-1],[x-1,y+1],[x+1,y+1]]){
+      if(nx<0||ny<0||nx>=w||ny>=h)continue;
+      const ni=ny*w+nx;
+      if(visited[ni])continue;
+      const npi=ni*4;
+      if(d[npi+3]<10){visited[ni]=1;continue;}
+      if(dist(d[npi],d[npi+1],d[npi+2])<=tolerance){visited[ni]=1;queue.push(ni);}
+    }
+  }
+  ctx.putImageData(imageData,0,0);
+  return canvas;
+}
+
+function compressImage(file, size=320){
+  return new Promise(res=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      const img=new Image();
+      img.onload=()=>{
+        // 1. Escalar imagen fuente (máx 900px para no sobrecargar memoria)
+        const maxDim=900;
+        let sw=img.width, sh=img.height;
+        if(Math.max(sw,sh)>maxDim){
+          const r=maxDim/Math.max(sw,sh);
+          sw=Math.round(sw*r); sh=Math.round(sh*r);
+        }
+        const tmp=document.createElement('canvas');
+        tmp.width=sw; tmp.height=sh;
+        tmp.getContext('2d').drawImage(img,0,0,sw,sh);
+
+        // 2. Quitar fondo
+        removeBackground(tmp, 40);
+
+        // 3. Calcular bounding box del sujeto
+        const tctx=tmp.getContext('2d');
+        const id=tctx.getImageData(0,0,sw,sh);
+        const d=id.data;
+        let minX=sw,minY=sh,maxX=0,maxY=0;
+        for(let y=0;y<sh;y++){
+          for(let x=0;x<sw;x++){
+            if(d[(y*sw+x)*4+3]>10){
+              if(x<minX)minX=x; if(x>maxX)maxX=x;
+              if(y<minY)minY=y; if(y>maxY)maxY=y;
+            }
+          }
+        }
+        if(maxX<=minX||maxY<=minY){minX=0;minY=0;maxX=sw-1;maxY=sh-1;}
+        const subW=maxX-minX+1, subH=maxY-minY+1;
+
+        // 4. Canvas de salida cuadrado — transparente (PNG conserva el fondo quitado)
+        const out=document.createElement('canvas');
+        out.width=size; out.height=size;
+        const octx=out.getContext('2d');
+        octx.clearRect(0,0,size,size);  // fondo transparente
+
+        const fill=size*0.82;
+        const scale=Math.min(fill/subW, fill/subH);
+        const dw=Math.round(subW*scale), dh=Math.round(subH*scale);
+        const dx=Math.round((size-dw)/2), dy=Math.round((size-dh)/2);
+        octx.drawImage(tmp, minX,minY,subW,subH, dx,dy,dw,dh);
+
+        // 5. WebP con transparencia (5× más liviano que PNG) → fallback a PNG
+        const webp=out.toDataURL('image/webp',0.85);
+        res(webp.startsWith('data:image/webp')?webp:out.toDataURL('image/png'));
+      };
+      img.src=e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+async function handleColorImgUpload(input,pid,ci){
+  const file=input.files[0];
+  if(!file)return;
+  showToast('⏳ Removiendo fondo...');
+  const b64=await compressImage(file);
+
+  // Actualizar input oculto y preview
+  const imgInput=pid==='new'
+    ? document.getElementById('adm_ci_'+ci)
+    : document.getElementById('adm_cimg_'+pid+'_'+ci);
+  if(imgInput)imgInput.value=b64;
+  const row=input.closest('.adm-row');
+  const preview=row?.querySelector('.clr-preview');
+  if(preview){preview.src=b64;preview.style.display='inline-block';}
+
+  // Auto-guardar en Firebase inmediatamente (no esperar al botón)
+  if(pid!=='new' && admMode==='edit'){
+    showToast('⏳ Guardando en Firebase...');
+    try{
+      await admSave(); // await garantiza que el fetch a Firebase se complete
+    }catch(e){
+      showToast('❌ Error al guardar: '+e.message);
+    }
+  } else {
+    showToast('✅ Fondo removido — da clic en Guardar');
+  }
+}
+
+/* Procesa una imagen desde su src (base64 o URL) — sin necesitar archivo */
+function processImageSrc(src, size=480){
+  return new Promise((resolve,reject)=>{
+    const img=new Image();
+    img.crossOrigin='anonymous';
+    img.onload=()=>{
+      const maxDim=900;
+      let sw=img.width, sh=img.height;
+      if(Math.max(sw,sh)>maxDim){const r=maxDim/Math.max(sw,sh);sw=Math.round(sw*r);sh=Math.round(sh*r);}
+      const tmp=document.createElement('canvas');
+      tmp.width=sw;tmp.height=sh;
+      const tctx=tmp.getContext('2d');
+      try{
+        tctx.drawImage(img,0,0,sw,sh);
+        tctx.getImageData(0,0,1,1); // lanza error si hay bloqueo CORS
+      }catch(e){reject(new Error('cors'));return;}
+      removeBackground(tmp,40);
+      const id=tctx.getImageData(0,0,sw,sh);
+      const d=id.data;
+      let minX=sw,minY=sh,maxX=0,maxY=0;
+      for(let y=0;y<sh;y++)for(let x=0;x<sw;x++){
+        if(d[(y*sw+x)*4+3]>10){
+          if(x<minX)minX=x;if(x>maxX)maxX=x;
+          if(y<minY)minY=y;if(y>maxY)maxY=y;
+        }
+      }
+      if(maxX<=minX||maxY<=minY){minX=0;minY=0;maxX=sw-1;maxY=sh-1;}
+      const subW=maxX-minX+1, subH=maxY-minY+1;
+      const out=document.createElement('canvas');
+      out.width=size;out.height=size;
+      const octx=out.getContext('2d');
+      octx.clearRect(0,0,size,size);
+      const fill=size*0.82;
+      const scale=Math.min(fill/subW,fill/subH);
+      const dw=Math.round(subW*scale),dh=Math.round(subH*scale);
+      octx.drawImage(tmp,minX,minY,subW,subH,Math.round((size-dw)/2),Math.round((size-dh)/2),dw,dh);
+      const webp=out.toDataURL('image/webp',0.85);
+      resolve(webp.startsWith('data:image/webp')?webp:out.toDataURL('image/png'));
+    };
+    img.onerror=()=>reject(new Error('load'));
+    img.src=src;
+  });
+}
+
+/* Botón 🪄 — quita el fondo a la imagen ya guardada en ese color */
+async function removeBgFromColor(pid, ci){
+  const isNew=(pid==='new');
+  const imgInputEl=isNew?document.getElementById('adm_ci_'+ci):document.getElementById('adm_cimg_'+pid+'_'+ci);
+  const row=imgInputEl?.closest('.adm-row');
+  const preview=row?.querySelector('.clr-preview');
+  const src=imgInputEl?.value||(preview?.src!==window.location.href?preview?.src:'');
+  if(!src){showToast('⚠️ No hay imagen en este color');return;}
+  showToast('⏳ Procesando...');
+  try{
+    const b64=await processImageSrc(src);
+    if(imgInputEl)imgInputEl.value=b64;
+    if(preview){preview.src=b64;preview.style.display='inline-block';}
+    // Auto-guardar también desde el botón 🪄
+    if(pid!=='new' && admMode==='edit'){
+      showToast('⏳ Guardando en Firebase...');
+      try{ await admSave(); }catch(e){ showToast('❌ Error: '+e.message); }
+    } else {
+      showToast('✅ Fondo removido — da clic en Guardar');
+    }
+  }catch(e){
+    if(e.message==='cors')
+      showToast('⚠️ Imagen bloqueada por CORS — descárgala y súbela con 📷');
+    else
+      showToast('❌ No se pudo cargar la imagen');
+  }
+}
+
+/* ── ADMIN ── */
+window.addEventListener('hashchange',checkAdminRoute);
+checkAdminRoute();
+function checkAdminRoute(){if(window.location.hash==='#admin')showAdminLogin();}
+
+function showAdminLogin(){
+  if(document.getElementById('adminOverlay'))return;
+  const div=document.createElement('div');
+  div.id='adminOverlay';
+  div.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;';
+  div.innerHTML=`
+  <div style="background:#1E1E1C;border:1px solid #333;border-radius:14px;padding:36px 40px;width:320px;color:#fff;text-align:center;">
+    <div style="font-family:Space Grotesk,sans-serif;font-size:20px;font-weight:700;margin-bottom:4px;">diprosa<span style="color:#E84520">.gt</span></div>
+    <p style="font-size:13px;color:#6B6B63;margin-bottom:22px;">Panel de administrador</p>
+    <input id="adminPassInput" type="password" placeholder="Contraseña" autofocus
+      style="width:100%;background:#111;border:1px solid #333;border-radius:8px;color:#fff;padding:11px 14px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;margin-bottom:12px;"/>
+    <div id="adminErr" style="display:none;color:#EF4444;font-size:12px;margin-bottom:10px;">Contraseña incorrecta</div>
+    <button onclick="checkAdminPass()" style="width:100%;background:#E84520;color:#fff;border:none;border-radius:6px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;">Entrar</button>
+    <button onclick="document.getElementById('adminOverlay').remove();history.replaceState(null,'',window.location.pathname)" style="margin-top:12px;background:none;border:none;color:#6B6B63;font-size:13px;cursor:pointer;font-family:inherit;">Cancelar</button>
+  </div>`;
+  document.body.appendChild(div);
+  div.querySelector('#adminPassInput').addEventListener('keydown',e=>{if(e.key==='Enter')checkAdminPass();});
+}
+function checkAdminPass(){
+  const val=document.getElementById('adminPassInput').value;
+  if(val===_ap){
+    document.getElementById('adminOverlay').remove();
+    showAdminPanel();
+  } else {
+    document.getElementById('adminErr').style.display='block';
+    document.getElementById('adminPassInput').value='';
+  }
+}
+function showAdminPanel(){
+  document.getElementById('admOv').classList.add('open');
+  buildList();
+}
+function admClose(){
+  document.getElementById('admOv').classList.remove('open');
+  history.replaceState(null,'',window.location.pathname);
+}
+
+async function changeMayoristaCode(){
+  const actual=MAYORISTA_CODE||MAYORISTA_DEFAULT_CODE;
+  const nuevo=prompt('🔑 CÓDIGO MAYORISTA\n\nEste código es el que les das a tus mayoristas por WhatsApp para que entren al área mayorista.\n\nCódigo actual: '+actual+'\n\nNuevo código (déjalo vacío para no cambiar):','').trim();
+  if(!nuevo) return;
+  if(nuevo.length<4){alert('El código debe tener al menos 4 caracteres.');return;}
+  const up=nuevo.toUpperCase();
+  try{
+    const res=await fetch(FB+'/config/mayoristaCode.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(up)});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    MAYORISTA_CODE=up;
+    alert('✅ Código mayorista actualizado a: '+up+'\n\nLos que ya tenían el código viejo NO podrán entrar más. Tendrás que mandarles el nuevo por WhatsApp.');
+  }catch(e){
+    alert('❌ No se pudo guardar: '+e.message);
+  }
+}
+
+async function diagnoseFirebase(){
+  showToast('⏳ Consultando Firebase...');
+  try{
+    const r=await fetch(FB+'/inventory.json?_='+Date.now(),{cache:'no-store'});
+    if(!r.ok){alert('❌ Firebase respondió HTTP '+r.status+'\n\nLas reglas de seguridad probablemente están bloqueando la lectura.');return;}
+    const data=await r.json();
+    if(!data){alert('📭 Firebase está VACÍO.\n\nNo hay ningún producto guardado en la nube. Cuando subas imágenes, deberían aparecer aquí.');return;}
+    const lines=[];
+    let totalKb=0;
+    let nullCount=0;
+    let nullKeys=[];
+    Object.entries(data).forEach(([key,sp])=>{
+      if(!sp || typeof sp !== 'object' || sp.id == null){
+        nullCount++;
+        nullKeys.push(key);
+        return;
+      }
+      const cols=sp.colors;
+      const arr=Array.isArray(cols)?cols:Object.values(cols||{});
+      const withImg=arr.filter(c=>c&&c.img&&c.img.length>50).length;
+      const totalCols=arr.length;
+      const kb=Math.round(JSON.stringify(sp).length/1024);
+      totalKb+=kb;
+      lines.push(`#${sp.id} ${sp.brand} ${sp.name}: ${withImg}/${totalCols} imágenes (${kb} KB)`);
+    });
+    let msg='🔬 ESTADO REAL DE FIREBASE\n\n'+lines.join('\n')+`\n\nTotal: ${totalKb} KB en ${lines.length} productos válidos`;
+    if(nullCount>0){
+      msg+=`\n\n⚠️ ${nullCount} entrada(s) BASURA (nulls/incompletos) en claves: ${nullKeys.join(', ')}\n→ Da clic en "🧹 Limpiar basura" para borrarlas.`;
+    }
+    alert(msg);
+  }catch(e){
+    alert('❌ Error consultando Firebase: '+e.message);
+  }
+}
+
+async function cleanFirebaseNulls(){
+  if(!confirm('🧹 Esto va a limpiar entradas nulls/corruptas en Firebase /inventory.\n\nLos productos válidos NO se tocan.\n\n¿Continuar?'))return;
+  showToast('⏳ Limpiando...');
+  try{
+    const r=await fetch(FB+'/inventory.json?_='+Date.now(),{cache:'no-store'});
+    const data=await r.json();
+    if(!data){alert('Firebase ya está vacío.');return;}
+    let cleaned=0;
+    const newData={};
+    Object.entries(data).forEach(([key,sp])=>{
+      if(sp && typeof sp==='object' && sp.id!=null && sp.brand){
+        newData[key]=sp;
+      } else {
+        cleaned++;
+      }
+    });
+    // sobreescribir /inventory completo solo con los válidos
+    await fetch(FB+'/inventory.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(newData)});
+    alert(`✅ Listo — ${cleaned} entradas basura eliminadas, ${Object.keys(newData).length} productos válidos conservados.\n\nRecarga la página (F5) para ver el resultado.`);
+  }catch(e){
+    alert('❌ Error: '+e.message);
+  }
+}
+
+async function wipeAllImages(){
+  if(!confirm('⚠️ Esto va a BORRAR todas las imágenes guardadas en Firebase de TODOS los productos.\n\nLos productos quedarán sin imágenes y deberás volver a subirlas.\n\n¿Continuar?'))return;
+  if(!confirm('Última confirmación: ¿Seguro que quieres borrar TODAS las imágenes?'))return;
+  showToast('⏳ Borrando imágenes...');
+  let ok=0, fail=0;
+  for(const p of products){
+    p.colors.forEach(c=>{c.img=null;});
+    try{ await saveProduct(p); ok++; }
+    catch(e){ fail++; console.warn('Error wipe',p.id,e); }
+  }
+  try{localStorage.removeItem(STORAGE_KEY);}catch(e){}
+  renderProducts();
+  if(admCurId!==null) admLoad(admCurId);
+  alert(`✅ Listo — ${ok} productos limpiados${fail?' ('+fail+' fallaron)':''}.\n\nAhora puedes volver a subir las imágenes desde el admin.`);
+}
+
+async function testFirebase(){
+  const btn=event.target;
+  btn.textContent='⏳ Probando...'; btn.disabled=true;
+  try{
+    // Escribir
+    const writeRes=await fetch(FB+'/test.json',{method:'PUT',body:JSON.stringify({ok:true,ts:Date.now()})});
+    if(!writeRes.ok) throw new Error('Escritura falló: HTTP '+writeRes.status+' — '+await writeRes.text());
+    // Leer de vuelta
+    const readRes=await fetch(FB+'/test.json');
+    const data=await readRes.json();
+    if(!data?.ok) throw new Error('Lectura falló o datos incorrectos');
+    // Limpiar
+    await fetch(FB+'/test.json',{method:'DELETE'});
+    alert('✅ Firebase funciona correctamente\n\nEscritura y lectura OK\n\nSi las imágenes igual desaparecen, el problema es el tamaño del payload.');
+  }catch(e){
+    alert('❌ Firebase NO está funcionando\n\nError: '+e.message+'\n\nSolución: En Firebase Console → Realtime Database → Reglas → publicar:\n{\n  "rules": {\n    ".read": true,\n    ".write": true\n  }\n}');
+  }finally{
+    btn.textContent='🔌 Probar Firebase'; btn.disabled=false;
+  }
+}
+
+// Extra products from localStorage
+function loadExtraProds(){
+  try{
+    const ov=JSON.parse(localStorage.getItem('dipAdm')||'{}');
+    if(!ov.extra)return;
+    ov.extra.forEach(ep=>{if(!products.find(x=>x.id===ep.id))products.push(ep);});
+  }catch(e){}
+}
+loadExtraProds();
+
+function buildList(){
+  const list=document.getElementById('admList');
+  list.innerHTML='';
+  const ov=JSON.parse(localStorage.getItem('dipAdm')||'{}');
+  const extra=(ov.extra||[]).map(x=>x.id);
+  products.forEach(p=>{
+    const d=document.createElement('div');
+    d.className='adm-item';
+    const isCustom=extra.indexOf(p.id)>=0;
+    d.innerHTML=p.brand+' '+p.name+(isCustom?'<span class="adm-prod-tag custom">nuevo</span>':'');
+    d.setAttribute('data-id',p.id);
+    d.onclick=function(){
+      document.querySelectorAll('.adm-item').forEach(x=>x.classList.remove('on'));
+      d.classList.add('on');admLoad(p.id);
+    };
+    list.appendChild(d);
+  });
+}
+
+async function deleteProduct(id, btn){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  if(!confirm(`¿Eliminar "${p.brand} ${p.name}"?\nEsta acción no se puede deshacer.`))return;
+
+  btn.disabled=true;
+  btn.textContent='⏳ Eliminando...';
+
+  // 1. Quitar del array local
+  const idx=products.findIndex(x=>x.id===id);
+  if(idx>=0) products.splice(idx,1);
+
+  // 2. Borrar nodo específico en Firebase (DELETE es más confiable que PUT completo)
+  try{
+    await fetch(FB+'/inventory/'+id+'.json',{method:'DELETE'});
+  }catch(e){console.warn('Firebase delete error',e);}
+
+  // 3. Limpiar localStorage
+  try{
+    const ov=JSON.parse(localStorage.getItem('dipAdm')||'{}');
+    if(ov.extra) ov.extra=ov.extra.filter(x=>x.id!==id);
+    localStorage.setItem('dipAdm',JSON.stringify(ov));
+  }catch(e){}
+
+  // 4. localStorage: solo datos sin imágenes
+  try{
+    const snap=products.map(p=>({...productToFB(p),colors:p.colors.map(c=>({name:c.name,hex:c.hex,bg:c.bg||'#eeeeee',img:null,disabled:!!c.disabled}))}));
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(snap));
+  }catch(e){localStorage.removeItem(STORAGE_KEY);}
+
+  renderProducts();
+  buildList();
+  document.getElementById('admMain').innerHTML=
+    '<p style="color:#86868b;font-size:13px;padding:20px 24px;">✅ Producto eliminado correctamente.</p>';
+  showToast('🗑️ Producto eliminado');
+}
+
+let admMode='edit',admCurId=null;
+function admLoad(id){
+  admMode='edit';admCurId=id;
+  const p=products.find(x=>x.id===id);if(!p)return;
+  const main=document.getElementById('admMain');
+  main.innerHTML=`
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:4px;">
+    <h2 style="margin:0;">${p.brand} ${p.name}</h2>
+    <button class="adm-del-product" id="delBtn_${p.id}" onclick="deleteProduct(${p.id},this)">🗑️ Eliminar producto</button>
+  </div>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Información básica</div>
+    <div class="adm-row"><span class="adm-lbl">Nombre</span><input class="adm-in adm-in-w" id="adm_name_${p.id}" value="${p.name}"></div>
+    <div class="adm-row"><span class="adm-lbl">Badge</span>
+      <select class="adm-sel" id="adm_badge_${p.id}">
+        <option value="" ${!p.badge?'selected':''}>Sin etiqueta</option>
+        <option value="new" ${p.badge==='new'?'selected':''}>Nuevo</option>
+        <option value="sale" ${p.badge==='sale'?'selected':''}>Oferta</option>
+      </select>
+    </div>
+    <div class="adm-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;">
+      <input type="checkbox" id="adm_stock_${p.id}" ${p.inStock===false?'':'checked'}> Disponible en stock
+    </label></div>
+  </div>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Colores</div>
+    <div style="font-size:11px;color:#86868b;margin-bottom:10px;">Activo · Punto · Nombre · Fondo · Subir foto</div>
+    <div id="adm_edit_color_rows_${p.id}">
+      ${p.colors.map((c,ci)=>`
+      <div class="adm-row" style="flex-wrap:wrap;gap:6px;align-items:center;background:#f9f9f9;border-radius:8px;padding:8px;margin-bottom:6px;">
+        <input type="checkbox" id="adm_color_${p.id}_${ci}" ${c.disabled?'':'checked'} title="Activo" style="flex-shrink:0;">
+        <input type="color" class="adm-color-pick" id="adm_chex_${p.id}_${ci}" value="${c.hex}" title="Color del punto" style="flex-shrink:0;">
+        <input class="adm-in" id="adm_cname_${p.id}_${ci}" value="${c.name}" placeholder="Nombre" style="width:90px;">
+        <input class="adm-in" id="adm_cbg_${p.id}_${ci}" value="${c.bg||''}" placeholder="#fafafa" style="width:90px;">
+        <input type="hidden" id="adm_cimg_${p.id}_${ci}" value="${c.img||''}">
+        <label style="cursor:pointer;background:#0071e3;color:#fff;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;">
+          📷 Subir foto
+          <input type="file" accept="image/*" style="display:none" onchange="handleColorImgUpload(this,'${p.id}',${ci})">
+        </label>
+        <button type="button" onclick="removeBgFromColor('${p.id}',${ci})" title="Quitar fondo a la imagen actual" style="background:#7c3aed;color:#fff;border:none;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;">🪄 Quitar fondo</button>
+        <img src="${c.img||''}" class="clr-preview" style="width:40px;height:40px;object-fit:contain;border-radius:4px;background:#f0f0f0;flex-shrink:0;${c.img?'':'display:none;'}">
+        <button class="adm-del-row" onclick="this.closest('.adm-row').remove()" title="Eliminar color">×</button>
+      </div>`).join('')}
+    </div>
+    <button class="adm-add-row" onclick="admAddEditColor(${p.id})">+ Agregar color</button>
+  </div>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Almacenamiento y precios</div>
+    <div style="font-size:11px;color:#86868b;margin-bottom:10px;">Capacidad · Precio retail · 🏪 Precio mayorista · Precio tachado (opcional)</div>
+    <div id="adm_edit_storage_rows_${p.id}">
+      ${p.storage.map((s,i)=>`
+      <div class="adm-row" style="background:#f5f5f7;border-radius:8px;padding:8px;margin-bottom:6px;gap:6px;flex-wrap:wrap;align-items:center;">
+        <input class="adm-in" id="adm_slabel_${p.id}_${i}" value="${s.label}" placeholder="Ej: 256 GB" style="width:90px;">
+        <input class="adm-in" id="adm_price_${p.id}_${i}" value="${s.price}" placeholder="Q0,000" title="Precio público (retail)" style="width:90px;">
+        <input class="adm-in" id="adm_pricew_${p.id}_${i}" value="${s.priceWholesale||''}" placeholder="🏪 Mayorista" title="Precio mayorista (opcional)" style="width:110px;background:#f0fdf4;border-color:#bbf7d0;">
+        <input class="adm-in" id="adm_old_${p.id}_${i}" value="${s.oldPrice||''}" placeholder="Tachado (opcional)" style="width:120px;">
+        <button class="adm-del-row" onclick="this.closest('.adm-row').remove()" title="Eliminar">×</button>
+      </div>`).join('')}
+    </div>
+    <button class="adm-add-row" onclick="admAddEditStorage(${p.id})">+ Agregar almacenamiento</button>
+  </div>`;
+}
+let storageRowCount=1, colorRowCount=1;
+let admEditColorCount={}, admEditStorageCount={};
+function admAddEditStorage(pid){
+  if(!admEditStorageCount[pid]) admEditStorageCount[pid]=100;
+  const i=admEditStorageCount[pid]++;
+  const container=document.getElementById('adm_edit_storage_rows_'+pid);
+  if(!container)return;
+  const d=document.createElement('div');
+  d.className='adm-row';
+  d.style.cssText='background:#f5f5f7;border-radius:8px;padding:8px;margin-bottom:6px;gap:6px;flex-wrap:wrap;align-items:center;';
+  d.innerHTML=`<input class="adm-in" id="adm_slabel_${pid}_${i}" placeholder="Ej: 512 GB" style="width:90px;">
+    <input class="adm-in" id="adm_price_${pid}_${i}" placeholder="Q0,000" title="Precio retail" style="width:90px;">
+    <input class="adm-in" id="adm_pricew_${pid}_${i}" placeholder="🏪 Mayorista" title="Precio mayorista (opcional)" style="width:110px;background:#f0fdf4;border-color:#bbf7d0;">
+    <input class="adm-in" id="adm_old_${pid}_${i}" placeholder="Tachado (opcional)" style="width:120px;">
+    <button class="adm-del-row" onclick="this.closest('.adm-row').remove()" title="Eliminar">×</button>`;
+  container.appendChild(d);
+}
+function admAddEditColor(pid){
+  if(!admEditColorCount[pid]) admEditColorCount[pid]=100;
+  const i=admEditColorCount[pid]++;
+  const container=document.getElementById('adm_edit_color_rows_'+pid);
+  if(!container)return;
+  const d=document.createElement('div');
+  d.className='adm-row';
+  d.style.cssText='flex-wrap:wrap;gap:6px;align-items:center;background:#f9f9f9;border-radius:8px;padding:8px;margin-bottom:6px;';
+  d.innerHTML=`<input type="checkbox" id="adm_color_${pid}_${i}" checked title="Activo" style="flex-shrink:0;">
+    <input type="color" class="adm-color-pick" id="adm_chex_${pid}_${i}" value="#cccccc" title="Color del punto" style="flex-shrink:0;">
+    <input class="adm-in" id="adm_cname_${pid}_${i}" placeholder="Nombre" style="width:90px;">
+    <input class="adm-in" id="adm_cbg_${pid}_${i}" placeholder="#fafafa" style="width:90px;">
+    <input type="hidden" id="adm_cimg_${pid}_${i}" value="">
+    <label style="cursor:pointer;background:#0071e3;color:#fff;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;">
+      📷 Subir foto
+      <input type="file" accept="image/*" style="display:none" onchange="handleColorImgUpload(this,'${pid}',${i})">
+    </label>
+    <button type="button" onclick="removeBgFromColor('${pid}',${i})" title="Quitar fondo a la imagen actual" style="background:#7c3aed;color:#fff;border:none;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;">🪄 Quitar fondo</button>
+    <img src="" class="clr-preview" style="width:40px;height:40px;object-fit:contain;border-radius:4px;background:#f0f0f0;flex-shrink:0;display:none;">
+    <button class="adm-del-row" onclick="this.closest('.adm-row').remove()" title="Eliminar color">×</button>`;
+  container.appendChild(d);
+}
+function admNewForm(){
+  admMode='new';admCurId=null;
+  storageRowCount=1;colorRowCount=1;
+  document.querySelectorAll('.adm-item').forEach(x=>x.classList.remove('on'));
+  const newId=Date.now();
+  document.getElementById('admMain').innerHTML=`
+  <h2>Nuevo producto</h2>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Información básica</div>
+    <div class="adm-row"><span class="adm-lbl">Marca</span><input class="adm-in" id="adm_new_brand" placeholder="Apple"></div>
+    <div class="adm-row"><span class="adm-lbl">Nombre</span><input class="adm-in adm-in-w" id="adm_new_name" placeholder="iPhone XX"></div>
+    <div class="adm-row"><span class="adm-lbl">Badge</span>
+      <select class="adm-sel" id="adm_new_badge">
+        <option value="">Sin etiqueta</option><option value="new">Nuevo</option><option value="sale">Oferta</option>
+      </select>
+    </div>
+    <div class="adm-row"><span class="adm-lbl">Categoría</span>
+      <select class="adm-sel" id="adm_new_cat">
+        <option value="iphone">iPhone</option><option value="samsung">Samsung</option>
+      </select>
+    </div>
+    <div class="adm-row"><span class="adm-lbl">URL Imagen</span><input class="adm-in adm-in-w" id="adm_new_img" placeholder="https://..."></div>
+  </div>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Colores disponibles</div>
+    <div style="font-size:11px;color:#86868b;margin-bottom:8px;">Nombre · Color hex · Fondo · URL imagen del color</div>
+    <div id="adm_color_rows">
+      <div class="adm-row" id="adm_cr_0">
+        <input class="adm-in" placeholder="Negro" id="adm_cn_0" style="width:80px;">
+        <input type="color" class="adm-color-pick" id="adm_ch_0" value="#1d1d1f" title="Color del punto">
+        <input class="adm-in" placeholder="bg ej: #e0e0e2" id="adm_cb_0" style="width:110px;" value="#e0e0e2">
+        <input type="hidden" id="adm_ci_0">
+        <label style="cursor:pointer;background:#0071e3;color:#fff;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;">
+          📷 Subir foto
+          <input type="file" accept="image/*" style="display:none" onchange="handleColorImgUpload(this,'new',0)">
+        </label>
+        <button type="button" onclick="removeBgFromColor('new',0)" title="Quitar fondo a imagen actual" style="background:#7c3aed;color:#fff;border:none;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;">🪄 Quitar fondo</button>
+        <img src="" class="clr-preview" style="width:40px;height:40px;object-fit:contain;border-radius:4px;background:#f0f0f0;flex-shrink:0;display:none;">
+      </div>
+    </div>
+    <button class="adm-add-row" onclick="addColorRow()">+ Agregar color</button>
+  </div>
+  <div class="adm-sec">
+    <div class="adm-sec-t">Almacenamiento y precios</div>
+    <div id="adm_storage_rows">
+      <div class="adm-row" id="adm_sr_0">
+        <input class="adm-in" placeholder="Ej: 256 GB" id="adm_sl_0" style="width:100px;">
+        <input class="adm-in" placeholder="Q0,000" id="adm_sp_0" title="Precio retail" style="width:100px;">
+        <input class="adm-in" placeholder="🏪 Mayorista" id="adm_spw_0" title="Precio mayorista (opcional)" style="width:120px;background:#f0fdf4;border-color:#bbf7d0;">
+        <input class="adm-in" placeholder="Tachado (opcional)" id="adm_so_0" style="width:140px;">
+      </div>
+    </div>
+    <button class="adm-add-row" onclick="addStorageRow()">+ Agregar almacenamiento</button>
+  </div>
+  <input type="hidden" id="adm_new_id" value="${newId}">`;
+}
+function addColorRow(){
+  const i=colorRowCount++;
+  const d=document.createElement('div');d.className='adm-row';d.id='adm_cr_'+i;
+  d.innerHTML=`<input class="adm-in" placeholder="Nombre" id="adm_cn_${i}" style="width:80px;"><input type="color" class="adm-color-pick" id="adm_ch_${i}" value="#cccccc" title="Color del punto"><input class="adm-in" placeholder="bg ej: #eeeeee" id="adm_cb_${i}" style="width:110px;"><input type="hidden" id="adm_ci_${i}"><label style="cursor:pointer;background:#0071e3;color:#fff;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;">📷 Subir foto<input type="file" accept="image/*" style="display:none" onchange="handleColorImgUpload(this,'new',${i})"></label><img src="" class="clr-preview" style="width:40px;height:40px;object-fit:contain;border-radius:4px;background:#f0f0f0;display:none;flex-shrink:0;"><button class="adm-del-row" onclick="this.parentElement.remove()">×</button>`;
+  document.getElementById('adm_color_rows').appendChild(d);
+}
+function addStorageRow(){
+  const i=storageRowCount++;
+  const d=document.createElement('div');d.className='adm-row';d.id='adm_sr_'+i;
+  d.innerHTML=`<input class="adm-in" placeholder="Ej: 512 GB" id="adm_sl_${i}" style="width:100px;"><input class="adm-in" placeholder="Q0,000" id="adm_sp_${i}" title="Precio retail" style="width:100px;"><input class="adm-in" placeholder="🏪 Mayorista" id="adm_spw_${i}" title="Precio mayorista (opcional)" style="width:120px;background:#f0fdf4;border-color:#bbf7d0;"><input class="adm-in" placeholder="Tachado (opcional)" id="adm_so_${i}" style="width:140px;"><button class="adm-del-row" onclick="this.parentElement.remove()">×</button>`;
+  document.getElementById('adm_storage_rows').appendChild(d);
+}
+async function admSave(){
+  if(admMode==='new'){
+    const brand=document.getElementById('adm_new_brand')?.value.trim()||'';
+    const name=document.getElementById('adm_new_name')?.value.trim()||'';
+    if(!brand||!name){showToast('⚠️ Completa marca y nombre');return;}
+    const id=parseInt(document.getElementById('adm_new_id').value)||Date.now();
+    const badge=document.getElementById('adm_new_badge')?.value||'';
+    const cat=document.getElementById('adm_new_cat')?.value||'iphone';
+    const img=document.getElementById('adm_new_img')?.value.trim()||null;
+    const storage=[];
+    let i=0;
+    while(document.getElementById('adm_sl_'+i)){
+      const label=document.getElementById('adm_sl_'+i)?.value.trim();
+      const price=document.getElementById('adm_sp_'+i)?.value.trim();
+      const priceWholesale=document.getElementById('adm_spw_'+i)?.value.trim()||null;
+      const oldPrice=document.getElementById('adm_so_'+i)?.value.trim()||null;
+      if(label&&price) storage.push({label,price,priceWholesale,oldPrice});
+      i++;
+    }
+    if(!storage.length){showToast('⚠️ Agrega al menos un precio');return;}
+    const colors=[];let ci=0;
+    while(document.getElementById('adm_cn_'+ci)){
+      const cname=document.getElementById('adm_cn_'+ci)?.value.trim();
+      const chex=document.getElementById('adm_ch_'+ci)?.value||'#1d1d1f';
+      const cbg=document.getElementById('adm_cb_'+ci)?.value.trim()||'#e0e0e2';
+      const cimg=document.getElementById('adm_ci_'+ci)?.value.trim()||null;
+      if(cname) colors.push({name:cname,hex:chex,bg:cbg,img:cimg});
+      ci++;
+    }
+    if(!colors.length) colors.push({name:'Negro',hex:'#1d1d1f',bg:'#e0e0e2',img:null});
+    const np={id,cat,icon:'📱',brand,name,badge,img,inStock:true,storageLabel:'Almacenamiento',colors,storage};
+    products.push(np);
+    saveProduct(np).catch(e=>console.warn('Error guardando en Firebase:',e));
+    buildList();renderProducts();
+    showToast('✅ Producto agregado');
+  } else if(admMode==='edit'&&admCurId!==null){
+    const p=products.find(x=>x.id===admCurId);if(!p)return;
+    const nameEl=document.getElementById('adm_name_'+p.id);
+    const badgeEl=document.getElementById('adm_badge_'+p.id);
+    const stockEl=document.getElementById('adm_stock_'+p.id);
+    if(nameEl) p.name=nameEl.value.trim()||p.name;
+    if(badgeEl) p.badge=badgeEl.value;
+    if(stockEl) p.inStock=stockEl.checked;
+    // Reconstruir array de colores desde el DOM
+    const colorContainer=document.getElementById('adm_edit_color_rows_'+p.id);
+    if(colorContainer){
+      const newColors=[];
+      colorContainer.querySelectorAll('.adm-row').forEach(row=>{
+        const chk=row.querySelector('input[type="checkbox"]');
+        const hex=row.querySelector('input[type="color"]');
+        const nameMatch=row.querySelector('input[id^="adm_cname_"]');
+        const bgMatch=row.querySelector('input[id^="adm_cbg_"]');
+        const imgMatch=row.querySelector('input[id^="adm_cimg_"]');
+        const cname=nameMatch?.value.trim();
+        if(cname){
+          newColors.push({
+            name:cname,
+            hex:hex?.value||'#1d1d1f',
+            bg:bgMatch?.value.trim()||'#e0e0e2',
+            img:imgMatch?.value.trim()||null,
+            disabled:chk?!chk.checked:false
+          });
+        }
+      });
+      if(newColors.length) p.colors=newColors;
+    }
+    // Reconstruir array de almacenamiento desde el DOM
+    const storageContainer=document.getElementById('adm_edit_storage_rows_'+p.id);
+    if(storageContainer){
+      const newStorage=[];
+      storageContainer.querySelectorAll('.adm-row').forEach(row=>{
+        const labelEl=row.querySelector('input[id^="adm_slabel_"]');
+        const priceEl=row.querySelector('input[id^="adm_price_"]');
+        const priceWEl=row.querySelector('input[id^="adm_pricew_"]');
+        const oldEl=row.querySelector('input[id^="adm_old_"]');
+        const label=labelEl?.value.trim();
+        const price=priceEl?.value.trim();
+        if(label&&price) newStorage.push({
+          label,
+          price,
+          priceWholesale: priceWEl?.value.trim() || null,
+          oldPrice: oldEl?.value.trim() || null
+        });
+      });
+      if(newStorage.length) p.storage=newStorage;
+    }
+    renderProducts();
+    const btn=document.getElementById('admSaveBtn');
+    if(btn){btn.disabled=true; btn.textContent='⏳ Guardando...';}
+    const kb=Math.round(JSON.stringify(productToFB(p)).length/1024);
+    return saveProduct(p)
+      .then(()=>{
+        btn.textContent='✓ Guardado ('+kb+' KB)';btn.classList.add('ok');
+        try{
+          const snap=products.map(x=>({...productToFB(x),colors:x.colors.map(c=>({name:c.name,hex:c.hex,bg:c.bg||'#eeeeee',img:null,disabled:!!c.disabled}))}));
+          localStorage.setItem(STORAGE_KEY,JSON.stringify(snap));
+        }catch(e){localStorage.removeItem(STORAGE_KEY);}
+        showToast('☁️ Guardado en Firebase — '+kb+' KB');
+      })
+      .catch(e=>{
+        btn.classList.remove('ok');
+        btn.textContent='❌ Error — ver alerta';
+        alert('❌ No se pudo guardar en Firebase\n\nError: '+e.message+'\nTamaño: '+kb+' KB\n\nVerificá que las reglas de Firebase permitan escritura.');
+      })
+      .finally(()=>{
+        btn.disabled=false;
+        setTimeout(()=>{btn.textContent='Guardar cambios';btn.classList.remove('ok');},4000);
+      });
+  }
+}
+
+
+/* ── LOGO EASTER EGG (5 clicks) ── */
+let _logoClicks=0,_logoTimer=null;
+function handleLogoClick(e){
+  e.preventDefault();
+  _logoClicks++;
+  clearTimeout(_logoTimer);
+  if(_logoClicks>=5){_logoClicks=0;showAdminLogin();}
+  else{_logoTimer=setTimeout(()=>{_logoClicks=0;},1800);}
+}
+
+/* ── INIT ── */
+(async function init(){
+  await loadMayoristaCode();      // 1. trae el código mayorista actual de Firebase
+  restoreMayoristaSession();      // 2. si hay sesión válida, marca isMayorista=true
+  await loadInventory();          // 3. carga productos
+  applyMayoristaMode();           // 4. aplica modo (renderiza con precios correctos)
+  handleMayoristaHash();          // 5. si entró con #mayoristas, abre login
+})();
+document.getElementById('checkoutModal').addEventListener('click',function(e){if(e.target===this)closeCheckout();});
+
+/* ── HERO SLIDESHOW ── */
+let currentSlide = 0;
+const totalSlides = 2;
+
+function goToSlide(n) {
+  if(n === currentSlide) return; // ya está activo, no hacer nada
+  const oldSlide = document.getElementById('slide-' + currentSlide);
+  const newSlide = document.getElementById('slide-' + n);
+  const dots = document.querySelectorAll('.slide-dot');
+  if(!oldSlide || !newSlide) return;
+  // El nuevo slide se hace visible (z-index:2 + opacity:1) ANTES de quitar el viejo
+  newSlide.classList.add('active');
+  if(dots[currentSlide]) dots[currentSlide].classList.remove('active');
+  if(dots[n]) dots[n].classList.add('active');
+  // Pequeño delay para que la transición se vea limpia
+  setTimeout(()=>{ oldSlide.classList.remove('active'); }, 50);
+  currentSlide = n;
+}
+
+// Pausar el autoplay cuando la pestaña no está visible (mejor UX)
+let _slideTimer = setInterval(function() {
+  goToSlide((currentSlide + 1) % totalSlides);
+}, 4500);
+document.addEventListener('visibilitychange', function(){
+  if(document.hidden){ clearInterval(_slideTimer); _slideTimer = null; }
+  else if(!_slideTimer){
+    _slideTimer = setInterval(function(){ goToSlide((currentSlide + 1) % totalSlides); }, 4500);
+  }
+});
+</script>
+</body>
+</html>
